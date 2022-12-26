@@ -1,0 +1,3383 @@
+<app-header></app-header>
+
+<!-- ======= INIT TEST ======= -->
+<section class="cta" *ngIf="progress == -1">
+  <section class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="animation-geometria">
+        <ng-lottie [options]="optionsGeometria" containerClass="animation-geometria"></ng-lottie>
+      </div>
+      <div class="col-12 order-2 mt-5 mt-lg-0">
+        <div class="d-flex align-items-center" style="height: 150px;">
+          <div class="text-center">
+            <h3 style="color: white;">TEST</h3>
+            <p>Somos una empresa especializada en el diseño de modelos de orientación vocacional que ofrece una
+              plataforma
+              interactiva que permite la adecuada toma de decisiones en estudiantes de colegio, universitarios y
+              empresas
+              interesadas en el sector laboral y educativo.</p>
+            <a *ngIf="this.userIsAuthenticated" class="cta-btn" (click)="continueIni()">Iniciar test</a>
+            <a *ngIf="!this.userIsAuthenticated" class="cta-btn" href="/login">Iniciar test</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+</section>
+<section id="services" class="services" *ngIf="progress == -1">
+  <div class="container">
+
+    <div class="section-title">
+      <!--
+      <h2>Ciencia de vanguardia</h2>
+      -->
+      <p>Descubra sus mejores carreras profesionales utilizando la ciencia de vanguardia de <strong
+          class="text-orange fw-bold">Octaedro.</strong></p>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-6 d-flex align-items-stretch mt-0 mt-lg-0">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-bar-chart-fill"></i></div>
+          <h4 class="title">Plataforma de rápido avance</h4>
+          <p class="description">Nuestros modelos de aprendizaje automático se entrenan en millones de puntos de datos,
+            mejorando constantemente la confiabilidad y validez de los resultados de nuestras pruebas profesionales.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex align-items-stretch mt-3 mt-lg-0">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-arrows-move"></i></div>
+          <h4 class="title">Modelo integral</h4>
+          <p class="description">Proporcionamos coincidencias profesionales basadas en sus intereses, objetivos,
+            historial, preferencias laborales y personalidad.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex align-items-stretch mt-2 mt-3">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-bricks"></i></div>
+          <h4 class="title">Mejoras inteligentes</h4>
+          <p class="description">Ajustamos continuamente nuestros algoritmos y actualizamos nuestros conjuntos de datos
+            para proporcionar una precisión de coincidencia líder en la industria.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex align-items-stretch mt-2 mt-3">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-info-circle"></i></div>
+          <h4 class="title">Actualizar informacion</h4>
+          <p class="description">Actualizamos nuestra base de datos de más de 1500 perfiles de carreras y títulos
+            constantemente para reflejar el mundo laboral en constante cambio.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<section id="services" class="services section-bg" *ngIf="progress == -1">
+  <div class="container">
+
+    <div class="row mt-2">
+      <div class="icon-box col-12 col-lg-6" id="orientacion">
+
+        <div class="icon"><span class="number">1</span></div>
+        <h4 class="title">Aprende sobre la marcha</h4>
+        <p class="description">Cada parte de la prueba de carrera desbloquea nuevos descubrimientos: información sobre
+          lo que lo hace único y las trayectorias profesionales que encontrará más satisfactorias, lo que aumentará
+          sus
+          resultados finales.
+        </p>
+      </div>
+      <div class="d-none d-lg-block col-12 col-lg-6 d-flex justify-content-center">
+        <div class="animation-idea2">
+          <ng-lottie [options]="optionsIdea" containerClass="animation-idea2"></ng-lottie>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+
+      <div class="d-none d-lg-block col-12 col-lg-6 d-flex justify-content-center">
+        <div class="animation-conversacion">
+          <ng-lottie [options]="optionsConversacion" containerClass="animation-conversacion"></ng-lottie>
+        </div>
+      </div>
+      <div class="icon-box mt-4 col-12 col-lg-6" id="orientacion">
+        <div class="icon"><span class="number">2</span></div>
+        <h4 class="title">Comparta sus descubrimientos con amigos y colegas</h4>
+        <p class="description">¿Eres un emprendedor? ¿Artista? ¿Social? Comparta su arquetipo de personalidad y
+          coincidencias profesionales con su comunidad con un simple click.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="row mt-2">
+
+      <div class="icon-box mt-4 col-12 col-lg-6" id="orientacion">
+        <div class="icon"><span class="number">3</span></div>
+        <h4 class="title">Completa la prueba de carrera en tu tiempo</h4>
+        <p class="description">Nuestra prueba de carrera es exhaustiva para brindarle los resultados más precisos, no
+          solo una instantánea rápida y genérica. Realice la prueba en su teléfono, en su escritorio, en un viaje
+          diario
+          y vuelva a usarla en cualquier momento. Siempre puede continuar donde lo dejó.
+        </p>
+      </div>
+      <div class="d-none d-lg-block col-12 col-lg-6 d-flex justify-content-center align-items-center">
+        <div class="animation-women">
+          <ng-lottie [options]="optionsWomen" containerClass="animation-women"></ng-lottie>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="section-gradient2" *ngIf="progress == -1">
+  <div class="container">
+    <div class="section-title">
+      <h2 style="color: #fff;">Qué nos hace únicos</h2>
+      <p style="color: #fff;">Tenemos más datos y herramientas para optimizar nuestras predicciones profesionales que
+        cualquier otra prueba profesional. Esto significa que sus resultados son precisos, completos y matizados, no una
+        instantánea genérica y rápida como tantas otras pruebas profesionales.</p>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table text-light">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Octaedro</th>
+          <th scope="col">Otras pruebas de carrera</th>
+          <th scope="col">Otras pruebas de personalidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Perspectivas de personalidad basadas en el modelo Big Data</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+        </tr>
+        <tr>
+          <th scope="row">Perspectivas de personalidad basadas en códigos de Holland</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+        </tr>
+        <tr>
+          <th scope="row">Percepciones de personalidad emparejadas con relevancia profesional</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">Resultados en tiempo real a medida que completa la evaluación</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">Enfoques de carrera</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Enfoques de investigación</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Datos de ética profesional</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Algoritmo de aprendizaje automático entrenado con inteligencia artificial</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Perfiles de carrera continuamente actualizados</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Percepciones de personalidad emparejadas con relevancia profesional</th>
+          <td class="bg-light text-center"><i class="bi bi-check" style="font-size: 30px; color: #d06a53;"></i></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container mt-5">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="animation-justice">
+        <ng-lottie [options]="optionsJustice" containerClass="animation-justice"></ng-lottie>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ======= Info Box Section ======= -->
+<section class="info-box py-0" *ngIf="progress == -1">
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <!-- order-2 order-lg-1-->
+      <div class="col-12 d-flex flex-column justify-content-center align-items-stretch">
+
+        <div class="content">
+          <h3 class="text-center my-4 mt-lg-0">Preguntas frecuentes</h3>
+          <!--
+          <p class="d-none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Duis aute irure dolor in reprehenderit
+          </p>
+          -->
+        </div>
+
+        <div class="accordion-list mt-3">
+          <ul>
+
+            <li>
+              <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>¿Cuanto
+                cuesta?<i class="bi bi-caret-down icon-show"></i><i class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <p>
+                  Queremos ayudar a todos a aprender más sobre sí mismos y a tomar decisiones profesionales informadas,
+                  por lo que hemos hecho la evaluación a unos costos asequibles. Obtendrá sus mejores coincidencias
+                  profesionales, estadísticas y vistas previas de informes de forma inmediata.
+                  <br><br>
+                  Ofrecemos una membresía que le da acceso a sus puntajes coincidentes para las más de 800 carreras y
+                  más de 40 áreas de estudio. Así como la versión completa de nuestros informes de personalidad por un
+                  mes.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>¿Cuánto
+                tiempo durará la prueba?<i class="bi bi-caret-down icon-show"></i><i
+                  class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  La evaluación completa tarda unos 30 minutos en completarse. La minuciosidad de nuestra prueba de
+                  carrera nos permite ofrecer resultados personalizados y matizados. Creemos que no debe basar las
+                  decisiones importantes de la vida, como su educación y carrera, en un cuestionario rápido de cinco
+                  minutos. La evaluación se compone de cinco secciones y cada una desbloquea una dimensión adicional de
+                  ajuste.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>¿Puedo
+                volver a realizar el examen de carrera?<i class="bi bi-caret-down icon-show"></i><i
+                  class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  No, no se puede restablecer su cuenta para realizar el examen de carrera más de una vez. Pero puede
+                  consultarlo con nuestros diferentes asesores.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>04</span>¿Por qué
+                debería confiar en los resultados de mi carrera?<i class="bi bi-caret-down icon-show"></i><i
+                  class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Entrenamos modelos cada vez mejores a partir de este conjunto de datos en crecimiento para identificar
+                  mejor cómo sus intereses, historial laboral y educativo y personalidad informan en qué carreras sería
+                  una buena opción. Las predicciones son exclusivas para usted, pero están validadas frente a millones
+                  de otros usuarios.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed"><span>05</span>¿Quién
+                desarrolló esta prueba de carrera?<i class="bi bi-caret-down icon-show"></i><i
+                  class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Nuestros elementos de prueba de carrera fueron desarrollados por un equipo de psicólogos con años de
+                  experiencia. Los datos profesionales provienen de numerosas fuentes, incluida la base de datos del
+                  ministerio de trabajo, ministerio de educación, DANE y diferentes observatorios económicos y
+                  laborales.
+
+                  La plataforma de prueba de carrera es desarrollada y mantenida por el equipo de Octaedro.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" data-bs-target="#accordion-list-6" class="collapsed"><span>06</span>¿Para
+                quién está diseñado este examen de carrera?<i class="bi bi-caret-down icon-show"></i><i
+                  class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Las personas comienzan nuevas carreras en muchas etapas diferentes de la vida y nada en nuestra
+                  evaluación es específico para la edad. Hemos diseñado una prueba de carrera que funciona tanto para
+                  adultos como para estudiantes de secundaria y universitarios.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <a data-bs-toggle="collapse" data-bs-target="#accordion-list-7" class="collapsed"><span>07</span>¿Cómo se
+                manejan mis datos personales?<i class="bi bi-caret-down icon-show"></i><i
+                  class="bi bi-caret-down icon-close"></i></a>
+              <div id="accordion-list-7" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Creemos firmemente que usted es el propietario de sus datos, no nosotros. Nunca vendemos sus datos
+                  personales a terceros y utilizamos las mejores prácticas estándar de la industria, asegurándonos de
+                  que su información privada esté siempre encriptada y segura. También nos complace eliminar sus datos
+                  si lo solicita.
+
+                  Por eso, sus datos unicamente son usados con los objetivos presentados en el Test.
+                </p>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+
+      <!--
+      <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+        style="background-image: url(../assets/img/info-box.jpg);">&nbsp;</div>
+      
+       align-items-stretch order-1 order-lg-2 img
+      -->
+      <div class="col-lg-5 animation-dashboard mb-5 mb-lg-0">
+        <ng-lottie [options]="optionsDashboard" containerClass="animation-dashboard"></ng-lottie>
+      </div>
+
+    </div>
+
+
+  </div>
+</section><!-- End Info Box Section -->
+
+<!-- ======= PART ENCUESTA ======= -->
+<section id="contact" class="contact section-bg" *ngIf="progress == 0">
+  <div class="container">
+    <div class="section-title">
+      <h2>Encuesta Sociodemográfica</h2>
+      <p>A continuación, complete la siguiente encuesta para iniciar el test.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form0" (submit)="continuePart0()" class="php-email-form">
+
+          <div class="row">
+
+            <div class="col-12">
+
+              <!-- Nombre institución -->
+              <div class="form-group mb-3">
+                <label for="name">Institución (colegio, universidad, instituto, etc)</label>
+                <input type="text" formControlName="nombreInstitucion" class="form-control"
+                  placeholder="Nombre institución">
+                <div *ngIf="form0.get('nombreInstitucion').errors?.required && form0.get('nombreInstitucion').touched"
+                  class="alert alert-danger" role="alert">
+                  Por favor digite el nombre de su institución. En caso de no tener, digite 'NA'.
+                </div>
+              </div>
+
+              <!-- Estrato -->
+              <div class="form-group mb-3">
+                <label for="estratoSocioeconomico">Estrato</label>
+                <select formControlName="estratoSocioeconomico" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                </select>
+                <div *ngIf="form0.get('estratoSocioeconomico').errors?.required && form0.get('estratoSocioeconomico').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione un estrato.
+                </div>
+              </div>
+
+              <!-- Género -->
+              <div class="form-group mb-3">
+                <label for="genero">Género</label>
+                <select formControlName="genero" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Femenino</option>
+                  <option [value]="2">Masculino</option>
+                  <option [value]="3">Otro</option>
+                </select>
+                <div *ngIf="form0.get('genero').errors?.required && form0.get('genero').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+              <!-- Rango Edad -->
+              <div class="form-group mb-3">
+                <label for="rangoEdades">Rango Edad</label>
+                <select formControlName="rangoEdades" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">13-16</option>
+                  <option [value]="2">17-19</option>
+                  <option [value]="3">20-22</option>
+                  <option [value]="4">23-25</option>
+                  <option [value]="5">Más de 25</option>
+                </select>
+                <div *ngIf="form0.get('rangoEdades').errors?.required && form0.get('rangoEdades').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+              <!-- Preferencia estudios superiores -->
+              <div class="form-group select">
+                <label for="preferenciaEstudiosSuperiores">¿Cuál es tu preferencia de estudios superiores?</label>
+                <select formControlName="preferenciaEstudiosSuperiores" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Tecnólogo</option>
+                  <option [value]="2">Técnico</option>
+                  <option [value]="3">Universitario</option>
+                  <option [value]="4">Posgrado</option>
+                </select>
+                <div *ngIf="form0.get('preferenciaEstudiosSuperiores').errors?.required && form0.get('preferenciaEstudiosSuperiores').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <label class="mb-3">De las siguientes asignaturas, señala cuáles son las de tu mayor preferencia:</label>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaFilosofiaYLiteratura" type="checkbox">
+                <label class="form-check-label" for="asignaturaFilosofiaYLiteratura">
+                  Filosofía y Literatura
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaMatematicas" type="checkbox">
+                <label class="form-check-label" for="asignaturaMatematicas">
+                  Matemáticas
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaSocialesYCiudadanas" type="checkbox">
+                <label class="form-check-label" for="asignaturaSocialesYCiudadanas">
+                  Sociales y ciudadanas
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaCienciasNaturales" type="checkbox">
+                <label class="form-check-label" for="asignaturaCienciasNaturales">
+                  Ciencias Naturales
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaIdiomas" type="checkbox">
+                <label class="form-check-label" for="asignaturaIdiomas">
+                  Idiomas
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaDeportes" type="checkbox">
+                <label class="form-check-label" for="asignaturaDeportes">
+                  Deportes
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="asignaturaArtesYDanza" type="checkbox">
+                <label class="form-check-label" for="asignaturaArtesYDanza">
+                  Artes y Danza
+                </label>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+
+            <div *ngIf = "!this.isLoading" class="text-center mt-3">
+              <button type="submit" [disabled]="form0.invalid">Enviar</button>
+            </div>
+
+            <div *ngIf="this.isLoading" class="text-center mt-3">
+              <button type="submit" [disabled]="this.isLoading" style="width: 166px;">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Cargando...
+              </button>
+            </div>
+
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 0%; font-size: 14px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+          </div>
+          <div class="alert alert-danger mt-3" role="alert" *ngIf = "surveyError == true">
+            Ha ocurrido un error al intentar enviar la información de la encuesta. Por favor intenta más tarde. Si el error persiste, comunícate con <strong>servicios@octaedro.com.co</strong>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ======= PART 1 ======= -->
+<section id="contact" class="contact section-bg" *ngIf="progress == 1">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Autoconocimiento Parte A</h2>
+      <p>Marque la casilla de todos los adjetivos que describan su personalidad. Señale tantos como desee. Trate de
+        definirse tal como es, no como le gustaría ser.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form1" (submit)="continuePart1()" class="php-email-form">
+          <div class="row">
+            <div class="col-4">
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n1" type="checkbox">
+                <label class="form-check-label" for="n1">
+                  Huraño(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n2" type="checkbox">
+                <label class="form-check-label" for="n2">
+                  Discutidor(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n3" type="checkbox">
+                <label class="form-check-label" for="n3">
+                  Arrogante
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n4" type="checkbox">
+                <label class="form-check-label" for="n4">
+                  Capaz
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n5" type="checkbox">
+                <label class="form-check-label" for="n5">
+                  Común y corriente
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n6" type="checkbox">
+                <label class="form-check-label" for="n6">
+                  Conformista
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n7" type="checkbox">
+                <label class="form-check-label" for="n7">
+                  Concienzudo(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n8" type="checkbox">
+                <label class="form-check-label" for="n8">
+                  Curioso(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n9" type="checkbox">
+                <label class="form-check-label" for="n9">
+                  Dependiente
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n10" type="checkbox">
+                <label class="form-check-label" for="n10">
+                  Eficiente
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n11" type="checkbox">
+                <label class="form-check-label" for="n11">
+                  Paciente
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n12" type="checkbox">
+                <label class="form-check-label" for="n12">
+                  Dinámico
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n13" type="checkbox">
+                <label class="form-check-label" for="n13">
+                  Femenino(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n14" type="checkbox">
+                <label class="form-check-label" for="n14">
+                  Amistoso(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n15" type="checkbox">
+                <label class="form-check-label" for="n15">
+                  Generoso(a)
+                </label>
+              </div>
+            </div>
+
+            <div class="col-4">
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n16" type="checkbox">
+                <label class="form-check-label" for="n16">
+                  Dispuesto(a) a ayudar
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n17" type="checkbox">
+                <label class="form-check-label" for="n17">
+                  Inflexible
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n18" type="checkbox">
+                <label class="form-check-label" for="n18">
+                  Insensible
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n19" type="checkbox">
+                <label class="form-check-label" for="n19">
+                  Introvertido(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n20" type="checkbox">
+                <label class="form-check-label" for="n20">
+                  Intuitivo(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n21" type="checkbox">
+                <label class="form-check-label" for="n21">
+                  Irritable
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n22" type="checkbox">
+                <label class="form-check-label" for="n22">
+                  Amable
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n23" type="checkbox">
+                <label class="form-check-label" for="n23">
+                  De buenos modales
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n24" type="checkbox">
+                <label class="form-check-label" for="n24">
+                  Varonil
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n25" type="checkbox">
+                <label class="form-check-label" for="n25">
+                  Inconforme
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n26" type="checkbox">
+                <label class="form-check-label" for="n26">
+                  Poco realista
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n27" type="checkbox">
+                <label class="form-check-label" for="n27">
+                  Poco culto(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n28" type="checkbox">
+                <label class="form-check-label" for="n28">
+                  Poco idealista
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n29" type="checkbox">
+                <label class="form-check-label" for="n29">
+                  Impopular
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n30" type="checkbox">
+                <label class="form-check-label" for="n30">
+                  Original
+                </label>
+              </div>
+
+            </div>
+            <div class="col-4">
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n31" type="checkbox">
+                <label class="form-check-label" for="n31">
+                  Pesimista
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n32" type="checkbox">
+                <label class="form-check-label" for="n32">
+                  Hedonista
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n33" type="checkbox">
+                <label class="form-check-label" for="n33">
+                  Práctico(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n34" type="checkbox">
+                <label class="form-check-label" for="n34">
+                  Rebelde
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n35" type="checkbox">
+                <label class="form-check-label" for="n35">
+                  Reservado(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n36" type="checkbox">
+                <label class="form-check-label" for="n36">
+                  Culto(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n37" type="checkbox">
+                <label class="form-check-label" for="n37">
+                  Lento(a) de movimientos
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n38" type="checkbox">
+                <label class="form-check-label" for="n38">
+                  Sociable
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n39" type="checkbox">
+                <label class="form-check-label" for="n39">
+                  Estable
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n40" type="checkbox">
+                <label class="form-check-label" for="n40">
+                  Esforzado(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n41" type="checkbox">
+                <label class="form-check-label" for="n41">
+                  Fuerte
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n42" type="checkbox">
+                <label class="form-check-label" for="n42">
+                  Suspicaz
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n43" type="checkbox">
+                <label class="form-check-label" for="n43">
+                  Cumplido(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n44" type="checkbox">
+                <label class="form-check-label" for="n44">
+                  Modesto(a)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" formControlName="n45" type="checkbox">
+                <label class="form-check-label" for="n45">
+                  Poco convencional
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form1.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 12.5%; font-size: 14px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">12.5%</div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 2 ======= -->
+<section class="contact section-bg" *ngIf="progress == 2">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Autoconocimiento Parte B</h2>
+      <p>Califíquese de acuerdo con las siguientes características tal como considera ser en comparación con otras
+        personas de su edad. Seleccione la respuesta que más se ajuste a sí mismo.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 align-items-stretch contact-form-wrap">
+
+        <form [formGroup]="form2" (submit)="continuePart2()" class="php-email-form">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group select">
+                <label for="n1">Distraído</label>
+                <select formControlName="n1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n1').errors?.required && form2.get('n1').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n2">Capacidad artística</label>
+                <select formControlName="n2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n2').errors?.required && form2.get('n2').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n3">Capacidad burocrática</label>
+                <select formControlName="n3" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n3').errors?.required && form2.get('n3').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n4">Conservadurismo</label>
+                <select formControlName="n4" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n4').errors?.required && form2.get('n4').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n5">Cooperación</label>
+                <select formControlName="n5" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n5').errors?.required && form2.get('n5').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n6">Expresividad</label>
+                <select formControlName="n6" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n6').errors?.required && form2.get('n6').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+
+            </div>
+            <div class="col-4">
+              <div class="form-group select">
+                <label for="n7">Liderazgo</label>
+                <select formControlName="n7" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n7').errors?.required && form2.get('n7').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n8">Gusto en ayudar a los demás</label>
+                <select formControlName="n8" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n8').errors?.required && form2.get('n8').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n9">Capacidad matemática</label>
+                <select formControlName="n9" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n9').errors?.required && form2.get('n9').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n10">Capacidad mecánica</label>
+                <select formControlName="n10" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n10').errors?.required && form2.get('n10').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n11">Originalidad</label>
+                <select formControlName="n11" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n11').errors?.required && form2.get('n11').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n12">Popularidad en el sexo opuesto</label>
+                <select formControlName="n12" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n12').errors?.required && form2.get('n12').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+
+            </div>
+            <div class="col-4">
+              <div class="form-group select">
+                <label for="n13">Capacidad para investigar</label>
+                <select formControlName="n13" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n13').errors?.required && form2.get('n13').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n14">Capacidad científica</label>
+                <select formControlName="n14" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n14').errors?.required && form2.get('n14').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n15">Seguridad en sí mismo(a)</label>
+                <select formControlName="n15" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n15').errors?.required && form2.get('n15').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n16">Comprensión de si mismo(a)</label>
+                <select formControlName="n16" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n16').errors?.required && form2.get('n16').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n17">Comprensión de los demás</label>
+                <select formControlName="n17" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n17').errors?.required && form2.get('n17').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n18">Pulcritud</label>
+                <select formControlName="n18" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Menos que los demás</option>
+                  <option [value]="2">Igual que los demás</option>
+                  <option [value]="3">Más que los demás</option>
+                </select>
+                <div *ngIf="form2.get('n18').errors?.required && form2.get('n18').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Marque una opción.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form2.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 25%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 3 - AUTOCONOCIMIENTO PARTE C======= -->
+<section class="contact section-bg" *ngIf="progress == 3">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Autoconocimiento Parte C</h2>
+      <p>Indique qué importancia da a las siguientes clases de logros, aspiraciones y metas.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-11 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form3" (submit)="continuePart3()" class="php-email-form">
+
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group select">
+                <label for="n1">Estar feliz y satisfecho</label>
+                <select formControlName="n1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n1').errors?.required && form3.get('n1').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n2">Descubrir o elaborar un producto útil</label>
+                <select formControlName="n2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n2').errors?.required && form3.get('n2').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n3">Ayudas a quiénes están en apuros</label>
+                <select formControlName="n3" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n3').errors?.required && form3.get('n3').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n4">Llegar a ser una autoridad en algún tema</label>
+                <select formControlName="n4" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n4').errors?.required && form3.get('n4').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n5">Llegar a ser un(a) deportista destacado</label>
+                <select formControlName="n5" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n5').errors?.required && form3.get('n5').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n6">Llegar a ser un(a) líder en la comunidad</label>
+                <select formControlName="n6" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n6').errors?.required && form3.get('n6').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group select">
+                <label for="n7">Ser influyente en asuntos políticos</label>
+                <select formControlName="n7" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n7').errors?.required && form3.get('n7').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n8">Observar una conducta religiosa formal</label>
+                <select formControlName="n8" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n8').errors?.required && form3.get('n8').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n9">Contribuir a la ciencia en forma teórica</label>
+                <select formControlName="n9" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n9').errors?.required && form3.get('n9').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n10">Contribuir a la ciencia en forma técnica</label>
+                <select formControlName="n10" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n10').errors?.required && form3.get('n10').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n11">Escribir bien (novelas, poemas)</label>
+                <select formControlName="n11" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n11').errors?.required && form3.get('n11').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n12">Haber leído mucho</label>
+                <select formControlName="n12" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n12').errors?.required && form3.get('n12').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group select">
+                <label for="n13">Trabajar mucho</label>
+                <select formControlName="n13" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n13').errors?.required && form3.get('n13').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n14">Contribuir al bienestar humano</label>
+                <select formControlName="n14" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n14').errors?.required && form3.get('n14').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n15">Crear buenas obras artísticas (teatro, pintura)</label>
+                <select formControlName="n15" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n15').errors?.required && form3.get('n15').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n16">Llegar a ser un buen(a) músico(a)</label>
+                <select formControlName="n16" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n16').errors?.required && form3.get('n16').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n17">Llegar a ser un(a) experto(a) en negocios</label>
+                <select formControlName="n17" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n17').errors?.required && form3.get('n17').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="n18">Hallar un propósito real en la vida</label>
+                <select formControlName="n18" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Poco importante</option>
+                  <option [value]="2">Más o menos importante</option>
+                  <option [value]="3">Muy importante</option>
+                </select>
+                <div *ngIf="form3.get('n18').errors?.required && form3.get('n18').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form3.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 37.5%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">37.5%</div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 4 - AUTOCONOCIMIENTO PARTE D ======= -->
+<section class="contact section-bg" *ngIf="progress == 4">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Autoconocimiento Parte D</h2>
+      <p>Indique qué importancia da a las siguientes clases de logros, aspiraciones y metas.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form4" (submit)="continuePart4()" class="php-email-form">
+
+          <div class="row">
+            <div class="col-12">
+
+              <div class="form-group select">
+                <label for="n1">Me gusta...</label>
+                <select formControlName="n1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Leer y meditas sobre los problemas</option>
+                  <option [value]="2">Anotar datos y hacer cómputos</option>
+                  <option [value]="3">Tener una posición poderosa</option>
+                  <option [value]="4">Enseñar o ayudar a los demás</option>
+                  <option [value]="5">Trabajar manualmente, usar equipos y herramientas</option>
+                  <option [value]="6">Usar mi talento artístico</option>
+                </select>
+                <div *ngIf="form4.get('n1').errors?.required && form4.get('n1').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+              <div class="form-group select">
+                <label for="n2">Mi mayor habilidad se manifiesta en...</label>
+                <select formControlName="n2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Negocios</option>
+                  <option [value]="2">Artes</option>
+                  <option [value]="3">Ciencias</option>
+                  <option [value]="4">Liderazgo</option>
+                  <option [value]="5">Relaciones Humanas</option>
+                  <option [value]="6">Mecánica</option>
+                </select>
+                <div *ngIf="form4.get('n2').errors?.required && form4.get('n2').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+              <div class="form-group select">
+                <label for="n3">Soy muy incompetente en...</label>
+                <select formControlName="n3" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Negocios</option>
+                  <option [value]="2">Artes</option>
+                  <option [value]="3">Ciencias</option>
+                  <option [value]="4">Liderazgo</option>
+                  <option [value]="5">Relaciones Humanas</option>
+                  <option [value]="6">Mecánica</option>
+                </select>
+                <div *ngIf="form4.get('n3').errors?.required && form4.get('n3').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+              <div class="form-group select">
+                <label for="n4">Si tuviera que realizar alguna de estas actividades, la que menos me agradaría
+                  es...</label>
+                <select formControlName="n4" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Tener una posición de responsabilidad</option>
+                  <option [value]="2">Llevar pacientes mentales a actividades recreativas</option>
+                  <option [value]="3">Llevar registros exactos y complejos</option>
+                  <option [value]="4">Escribir un poema</option>
+                  <option [value]="5">Hacer algo que exija paciencia y precisión</option>
+                  <option [value]="6">Participar en actividades sociales muy formales</option>
+                </select>
+                <div *ngIf="form4.get('n4').errors?.required && form4.get('n4').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+              <div class="form-group select">
+                <label for="n5">Las materias que más me gustan son...</label>
+                <select formControlName="n5" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">Arte</option>
+                  <option [value]="2">Administración, contabilidad</option>
+                  <option [value]="3">Química, Física</option>
+                  <option [value]="4">Educación tecnológica, mecánica</option>
+                  <option [value]="5">Historia</option>
+                  <option [value]="6">Ciencias sociales, filosofía</option>
+                </select>
+                <div *ngIf="form4.get('n5').errors?.required && form4.get('n5').touched" class="alert alert-danger mb-0"
+                  role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form4.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 50%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 5 - ACTIVIDADES ======= -->
+<section id="contact" class="contact section-bg" *ngIf="progress == 5">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Actividades</h2>
+      <p>Marque todas las actividades que le interesen o agraden.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-11 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form5" (submit)="continuePart5()" class="php-email-form">
+          <div class="row">
+
+            <!-- REALISTA -->
+            <div class="col-12 col-lg-6">
+              <div class="text-orange fw-bold mb-3">Realista</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real1">
+                <label class="form-check-label" for="real1">
+                  Reparar artículos eléctricos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real2">
+                <label class="form-check-label" for="real2">
+                  Reparar automóviles
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real3">
+                <label class="form-check-label" for="real3">
+                  Reparar artículos mecánicos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real4">
+                <label class="form-check-label" for="real4">
+                  Hacer artículos de madera
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real5">
+                <label class="form-check-label" for="real5">
+                  Conducir camiones y tractores
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real6">
+                <label class="form-check-label" for="real6">
+                  Utilizar herramientas mecánicas o de herreria
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real7">
+                <label class="form-check-label" for="real7">
+                  Acondicionar un automóvil/bicicleta para carreras
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real8">
+                <label class="form-check-label" for="real8">
+                  Tomar un curso taller
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real9">
+                <label class="form-check-label" for="real9">
+                  Tomar un curso de dibujo mecánico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real10">
+                <label class="form-check-label" for="real10">
+                  Tomar un curso de labrado de madera
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real11">
+                <label class="form-check-label" for="real11">
+                  Tomar un curso de mecánica automotriz
+                </label>
+              </div>
+            </div>
+            <!-- SOCIALES -->
+            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+              <div class="text-orange fw-bold mb-3">Sociales</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social1">
+                <label class="form-check-label" for="social1">
+                  Escribir cartas a los amigos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social2">
+                <label class="form-check-label" for="social2">
+                  Ir a la iglesia
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social3">
+                <label class="form-check-label" for="social3">
+                  Pertenecer a grupos sociales
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social4">
+                <label class="form-check-label" for="social4">
+                  Ayudar a otros en sus problemas personales
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social5">
+                <label class="form-check-label" for="social5">
+                  Cuidar a niños
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social6">
+                <label class="form-check-label" for="social6">
+                  Asistir a fiestas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social7">
+                <label class="form-check-label" for="social7">
+                  Bailar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social8">
+                <label class="form-check-label" for="social8">
+                  Leer sobre psicología
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social9">
+                <label class="form-check-label" for="social9">
+                  Asistir a reuniones y conferencias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social10">
+                <label class="form-check-label" for="social10">
+                  Asistir a eventos deportivos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social11">
+                <label class="form-check-label" for="social11">
+                  Hacer nuevos amigos
+                </label>
+              </div>
+            </div>
+            <!-- INVESTIGADOR -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Investigador</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador1">
+                <label class="form-check-label" for="investigador1">
+                  Leer libros o revistas científicas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador2">
+                <label class="form-check-label" for="investigador2">
+                  Trabajar en un laboratorio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador3">
+                <label class="form-check-label" for="investigador3">
+                  Trabajar en un proyecto científico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador4">
+                <label class="form-check-label" for="investigador4">
+                  Construir modelos de cohetes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador5">
+                <label class="form-check-label" for="investigador5">
+                  Trabajar en un equipo de química
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador6">
+                <label class="form-check-label" for="investigador6">
+                  Leer temas espaciales por mi mismo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador7">
+                <label class="form-check-label" for="investigador7">
+                  Resolver problemas de matemáticas o ajedrez
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador8">
+                <label class="form-check-label" for="investigador8">
+                  Tomar un curso de química
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador9">
+                <label class="form-check-label" for="investigador9">
+                  Tomar un curso de física
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador10">
+                <label class="form-check-label" for="investigador10">
+                  Tomar un curso de geometría
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador11">
+                <label class="form-check-label" for="investigador11">
+                  Tomar un curso de biología
+                </label>
+              </div>
+            </div>
+            <!-- EMPRENDEDOR -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Emprendedor</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor1">
+                <label class="form-check-label" for="emprendedor1">
+                  Influir en los demás
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor2">
+                <label class="form-check-label" for="emprendedor2">
+                  Vender
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor3">
+                <label class="form-check-label" for="emprendedor3">
+                  Discutir sobre política
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor4">
+                <label class="form-check-label" for="emprendedor4">
+                  Administrar mi propio servicio o negocio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor5">
+                <label class="form-check-label" for="emprendedor5">
+                  Asistir a conferencias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor6">
+                <label class="form-check-label" for="emprendedor6">
+                  Ofrecer pláticas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor7">
+                <label class="form-check-label" for="emprendedor7">
+                  Ser oficial de cualquier grupo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor8">
+                <label class="form-check-label" for="emprendedor8">
+                  Supervisar el trabajo de otros
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor9">
+                <label class="form-check-label" for="emprendedor9">
+                  Conocer a gente importante
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor10">
+                <label class="form-check-label" for="emprendedor10">
+                  Dirigir a un grupo para la consecución de un fin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor11">
+                <label class="form-check-label" for="emprendedor11">
+                  Participar en una campaña política
+                </label>
+              </div>
+
+            </div>
+            <!-- ARTÍSTICAS -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Artísticas</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista1">
+                <label class="form-check-label" for="artista1">
+                  Bosquejar, dibujar o pintar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista2">
+                <label class="form-check-label" for="artista2">
+                  Asistir a conciertos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista3">
+                <label class="form-check-label" for="artista3">
+                  Diseñar muebles o edificios
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista4">
+                <label class="form-check-label" for="artista4">
+                  Tocar en una banda, conjunto u orquesta
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista5">
+                <label class="form-check-label" for="artista5">
+                  Tocar un instrumento musical
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista6">
+                <label class="form-check-label" for="artista6">
+                  Ir a recitales, conciertos o comedias musicales
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista7">
+                <label class="form-check-label" for="artista7">
+                  Leer novelas y temas de actualidad
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista8">
+                <label class="form-check-label" for="artista8">
+                  Hacer retratos o fotografia creativa
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista9">
+                <label class="form-check-label" for="artista9">
+                  Leer teatro
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista10">
+                <label class="form-check-label" for="artista10">
+                  Leer o escribir poesía
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista11">
+                <label class="form-check-label" for="artista11">
+                  Tomar un curso de arte
+                </label>
+              </div>
+
+            </div>
+            <!-- CONVENCIONALES -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Convencionales</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional1">
+                <label class="form-check-label" for="convencional1">
+                  Mantener en orden mi escritorio y habitación
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional2">
+                <label class="form-check-label" for="convencional2">
+                  Mecanografiar documentos o cartas para mi o para otros
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional3">
+                <label class="form-check-label" for="convencional3">
+                  Sumar, restar, multiplicar números en negocios o <br>administración
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional4">
+                <label class="form-check-label" for="convencional4">
+                  Manejar máquinas de negocios de cualquier tipo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional5">
+                <label class="form-check-label" for="convencional5">
+                  Llevar un registro pormenorizado de gastos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional6">
+                <label class="form-check-label" for="convencional6">
+                  Tomar un curso de mecanografía
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional7">
+                <label class="form-check-label" for="convencional7">
+                  Tomar un curso de comercio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional8">
+                <label class="form-check-label" for="convencional8">
+                  Tomar un curso de contabilidad
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional9">
+                <label class="form-check-label" for="convencional9">
+                  Tomar un curso de matemáticas comerciales
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional10">
+                <label class="form-check-label" for="convencional10">
+                  Archivar cartas, informes, registros, etc.
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional11">
+                <label class="form-check-label" for="convencional11">
+                  Escribir cartas de negocios
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form5.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 62.5%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">62.5%</div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 6 - HABILIDADES ======= -->
+<section id="contact" class="contact section-bg" *ngIf="progress == 6">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Habilidades</h2>
+      <p>Marque la casilla de todos los adjetivos que describan su personalidad. Señale tantos como desee. Trate de
+        definirse tal como es, no como le gustaría ser.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-11 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form6" (submit)="continuePart6()" class="php-email-form">
+
+          <div class="row">
+
+            <!-- REALISTA -->
+            <div class="col-12 col-lg-6">
+              <div class="text-orange fw-bold mb-3">Realista</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real1">
+                <label class="form-check-label" for="real1">
+                  He utilizado herramientas eléctricas de taller de carpintería,<br> como la sierra o el torno eléctrico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real2">
+                <label class="form-check-label" for="real2">
+                  Sé como usar un voltímetro
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real3">
+                <label class="form-check-label" for="real3">
+                  Puedo ajustar un carburador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real4">
+                <label class="form-check-label" for="real4">
+                  He trabajado con herramientas eléctricas de mecánica,<br> como taladro y rectificadora
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real5">
+                <label class="form-check-label" for="real5">
+                  Puedo darle acabado nuevo a los muebles de madera<br> manchados o barnizados
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real6">
+                <label class="form-check-label" for="real6">
+                  Puedo leer copias heliográficas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real7">
+                <label class="form-check-label" for="real7">
+                  Puedo hacer reparaciones de aparatos eléctricos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real8">
+                <label class="form-check-label" for="real8">
+                  Puedo reparar muebles
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real9">
+                <label class="form-check-label" for="real9">
+                  Puedo hacer dibujos mecánicos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real10">
+                <label class="form-check-label" for="real10">
+                  Puedo hacer reparaciones sencillas de televisión
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real11">
+                <label class="form-check-label" for="real11">
+                  Puedo hacer reparaciones simples de fontanería
+                </label>
+              </div>
+            </div>
+
+            <!-- SOCIALES -->
+            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+              <div class="text-orange fw-bold mb-3">Sociales</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social1">
+                <label class="form-check-label" for="social1">
+                  Tengo habilidad para explicar cosas a otras personas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social2">
+                <label class="form-check-label" for="social2">
+                  He participado en campañas de caridad o beneficiencia
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social3">
+                <label class="form-check-label" for="social3">
+                  Tengo habilidad para cooperar y trabajar en grupo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social4">
+                <label class="form-check-label" for="social4">
+                  Tengo habilidad para entretener a personas mayores
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social5">
+                <label class="form-check-label" for="social5">
+                  Soy un buen anfitrión
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social6">
+                <label class="form-check-label" for="social6">
+                  Tengo facilidad para enseñar a los niños
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social7">
+                <label class="form-check-label" for="social7">
+                  Puedo planear pasatiempos para una fiesta
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social8">
+                <label class="form-check-label" for="social8">
+                  Tengo habilidad para animar a personas con problemas<br> o enfadadas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social9">
+                <label class="form-check-label" for="social9">
+                  He trabajado como voluntario en un hospital, clínica o en<br> un hogar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social10">
+                <label class="form-check-label" for="social10">
+                  Puedo planear actividades sociales de una escuela u<br> organización
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social11">
+                <label class="form-check-label" for="social11">
+                  Tengo facilidad para captar la personalidad de los individuos
+                </label>
+              </div>
+            </div>
+
+            <!-- INVESTIGADOR -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Investigador</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador1">
+                <label class="form-check-label" for="investigador1">
+                  Puedo entender como funciona una aspiradora
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador2">
+                <label class="form-check-label" for="investigador2">
+                  Nombraría tres alimentos de alto contenido proteico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador3">
+                <label class="form-check-label" for="investigador3">
+                  Puedo entender la vida media de un elemento radioactivo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador4">
+                <label class="form-check-label" for="investigador4">
+                  Puedo usar las tablas de logaritmos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador5">
+                <label class="form-check-label" for="investigador5">
+                  Puedo utilizar una calculadora científica
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador6">
+                <label class="form-check-label" for="investigador6">
+                  Puedo usar un microscopio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador7">
+                <label class="form-check-label" for="investigador7">
+                  Puedo identificar tres constelaciones de las estrellas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador8">
+                <label class="form-check-label" for="investigador8">
+                  Puedo descubrir el funcionamiento de los leucocitos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador9">
+                <label class="form-check-label" for="investigador9">
+                  Puedo interpretar fórmula de química sencillas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador10">
+                <label class="form-check-label" for="investigador10">
+                  Puedo entender por qué los satélites artificiales no caen en<br> la tierra
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador11">
+                <label class="form-check-label" for="investigador11">
+                  He participado en certámenes o concursos
+                </label>
+              </div>
+            </div>
+
+            <!-- EMPRENDEDOR -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Emprendedor</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor1">
+                <label class="form-check-label" for="emprendedor1">
+                  He sido elegido para desempeñar un cargo en el colegio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor2">
+                <label class="form-check-label" for="emprendedor2">
+                  Puedo supervisar el trabajo de otros
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor3">
+                <label class="form-check-label" for="emprendedor3">
+                  Tengo energía y entusiasmo poco comunes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor4">
+                <label class="form-check-label" for="emprendedor4">
+                  Tengo habilidad para decirle a las personas cómo hacer<br> las cosas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor5">
+                <label class="form-check-label" for="emprendedor5">
+                  Soy un buen(a) vendedor(a)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor6">
+                <label class="form-check-label" for="emprendedor6">
+                  He sido portavoz de un grupo para presentar sugerencias<br> o quejas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor7">
+                <label class="form-check-label" for="emprendedor7">
+                  Gané un premio como reconocimiento a mi desempeño<br>como líder
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor8">
+                <label class="form-check-label" for="emprendedor8">
+                  He organizado algún club, grupo o equipo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor9">
+                <label class="form-check-label" for="emprendedor9">
+                  He puesto un negocio o servicio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor10">
+                <label class="form-check-label" for="emprendedor10">
+                  Sé como tener éxito como dirigente
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor11">
+                <label class="form-check-label" for="emprendedor11">
+                  Soy bueno(a) para defender mis ideas y discutirlas
+                </label>
+              </div>
+
+            </div>
+
+            <!-- ARTÍSTICAS -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Artísticas</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista1">
+                <label class="form-check-label" for="artista1">
+                  Puedo tocar un instrumento musical
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista2">
+                <label class="form-check-label" for="artista2">
+                  Puedo participar en grupos corales de dos o cuatro voces
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista3">
+                <label class="form-check-label" for="artista3">
+                  Puedo tocar como solista musical
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista4">
+                <label class="form-check-label" for="artista4">
+                  Puedo actuar en una obra de teatro
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista5">
+                <label class="form-check-label" for="artista5">
+                  Puedo leer interpretativamente
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista6">
+                <label class="form-check-label" for="artista6">
+                  Sé bailar danza moderna o clásica
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista7">
+                <label class="form-check-label" for="artista7">
+                  Puedo dibujar a una persona de manera que pueda<br> reconocerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista8">
+                <label class="form-check-label" for="artista8">
+                  Puedo pintar o esculpir
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista9">
+                <label class="form-check-label" for="artista9">
+                  Puedo hacer artículos de cerámica
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista10">
+                <label class="form-check-label" for="artista10">
+                  Puedo diseñar vestuarios, carteles o muebles
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista11">
+                <label class="form-check-label" for="artista11">
+                  Escribo bien cuentos o poesías
+                </label>
+              </div>
+
+            </div>
+            <!-- CONVENCIONALES -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Convencionales</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional1">
+                <label class="form-check-label" for="convencional1">
+                  Escribo rápidamente en una máquina de escribir o<br>computador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional2">
+                <label class="form-check-label" for="convencional2">
+                  Sé manejar una impresora o fotocopiadora
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional3">
+                <label class="form-check-label" for="convencional3">
+                  Sé tomar buenos apuntes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional4">
+                <label class="form-check-label" for="convencional4">
+                  Tengo habilidad para organizar información, preparar<br> archivos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional5">
+                <label class="form-check-label" for="convencional5">
+                  He realizado trabajos de oficina
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional6">
+                <label class="form-check-label" for="convencional6">
+                  Sé utilizar planillas de cálculo (excel) o realizar contabilidad
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional7">
+                <label class="form-check-label" for="convencional7">
+                  Me demoro poco en tramitar documentos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional8">
+                <label class="form-check-label" for="convencional8">
+                  Sé utilizar una calculadora
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional9">
+                <label class="form-check-label" for="convencional9">
+                  Puedo contabilizar haberes y deberes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional10">
+                <label class="form-check-label" for="convencional10">
+                  Sé utilizar un computador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional11">
+                <label class="form-check-label" for="convencional11">
+                  Puedo llevar regístros de compra y venta
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form6.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 75%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 7 - OCUPACIONES ======= -->
+<section id="contact" class="contact section-bg" *ngIf="progress == 7">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Ocupaciones</h2>
+      <p>Marque la casilla de todos los adjetivos que describan su personalidad. Señale tantos como desee. Trate de
+        definirse tal como es, no como le gustaría ser.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-11 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form7" (submit)="continuePart7()" class="php-email-form">
+          <div class="row">
+
+            <!-- REALISTA -->
+            <div class="col-12 col-lg-6">
+              <div class="text-orange fw-bold mb-3">Realista</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real1">
+                <label class="form-check-label" for="real1">
+                  Mecánico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real2">
+                <label class="form-check-label" for="real2">
+                  Especialista en piscicultura (crianza de especies marinas) o<br> agricultura
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real3">
+                <label class="form-check-label" for="real3">
+                  Operador en una fábrica o industria
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real4">
+                <label class="form-check-label" for="real4">
+                  Maestro gásfiter
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real5">
+                <label class="form-check-label" for="real5">
+                  Operador de máquinas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real6">
+                <label class="form-check-label" for="real6">
+                  Investigador privado
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real7">
+                <label class="form-check-label" for="real7">
+                  Inspector de construcciones
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real8">
+                <label class="form-check-label" for="real8">
+                  Radio-operador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real9">
+                <label class="form-check-label" for="real9">
+                  Empleado en una gasolinera
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real10">
+                <label class="form-check-label" for="real10">
+                  Diseñador de herramientas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real11">
+                <label class="form-check-label" for="real11">
+                  Fotograbador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real12">
+                <label class="form-check-label" for="real12">
+                  Electricista
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="real13">
+                <label class="form-check-label" for="real13">
+                  Ingeniero mecánico
+                </label>
+              </div>
+            </div>
+            <!-- SOCIALES -->
+            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+              <div class="text-orange fw-bold mb-3">Sociales</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social1">
+                <label class="form-check-label" for="social1">
+                  Misionero religioso
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social2">
+                <label class="form-check-label" for="social2">
+                  Profesor de educación básica
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social3">
+                <label class="form-check-label" for="social3">
+                  Orientador en asuntos de delincuencia juvenil
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social4">
+                <label class="form-check-label" for="social4">
+                  Psicopedagogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social5">
+                <label class="form-check-label" for="social5">
+                  Orientador matrimonial
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social6">
+                <label class="form-check-label" for="social6">
+                  Profesor de educación física
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social7">
+                <label class="form-check-label" for="social7">
+                  Director de organizaciones sociales
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social8">
+                <label class="form-check-label" for="social8">
+                  Psicólogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social9">
+                <label class="form-check-label" for="social9">
+                  Consejero
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social10">
+                <label class="form-check-label" for="social10">
+                  Especialista en organizaciones sociales
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social11">
+                <label class="form-check-label" for="social11">
+                  Trabajador en un hospital psiquiátrico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social12">
+                <label class="form-check-label" for="social12">
+                  Profesor de educación media
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="social13">
+                <label class="form-check-label" for="social13">
+                  Asesor en un municipio
+                </label>
+              </div>
+            </div>
+            <!-- INVESTIGADOR -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Investigador</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador1">
+                <label class="form-check-label" for="investigador1">
+                  Meteorólogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador2">
+                <label class="form-check-label" for="investigador2">
+                  Biólogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador3">
+                <label class="form-check-label" for="investigador3">
+                  Astrónomo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador4">
+                <label class="form-check-label" for="investigador4">
+                  Ingeniero Civil
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador5">
+                <label class="form-check-label" for="investigador5">
+                  Antropólogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador6">
+                <label class="form-check-label" for="investigador6">
+                  Zoólogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador7">
+                <label class="form-check-label" for="investigador7">
+                  Químico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador8">
+                <label class="form-check-label" for="investigador8">
+                  Investigador científico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador9">
+                <label class="form-check-label" for="investigador9">
+                  Escrito de artículos científicos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador10">
+                <label class="form-check-label" for="investigador10">
+                  Geólogo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador11">
+                <label class="form-check-label" for="investigador11">
+                  Botánico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="investigador12">
+                <label class="form-check-label" for="investigador12">
+                  Físico
+                </label>
+              </div>
+            </div>
+            <!-- EMPRENDEDOR -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Emprendedor</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor1">
+                <label class="form-check-label" for="emprendedor1">
+                  Ingeniero comercial
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor2">
+                <label class="form-check-label" for="emprendedor2">
+                  Especulador en la bolsa
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor3">
+                <label class="form-check-label" for="emprendedor3">
+                  Vendedor de acciones y títulos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor4">
+                <label class="form-check-label" for="emprendedor4">
+                  Agente de ventas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor5">
+                <label class="form-check-label" for="emprendedor5">
+                  Administrador de un hotel
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor6">
+                <label class="form-check-label" for="emprendedor6">
+                  Representante de una empresa
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor7">
+                <label class="form-check-label" for="emprendedor7">
+                  Ejecutivo de negocios
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor8">
+                <label class="form-check-label" for="emprendedor8">
+                  Agente viajero
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor9">
+                <label class="form-check-label" for="emprendedor9">
+                  Promotor
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor10">
+                <label class="form-check-label" for="emprendedor10">
+                  Director de empresas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor11">
+                <label class="form-check-label" for="emprendedor11">
+                  Político
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor12">
+                <label class="form-check-label" for="emprendedor12">
+                  Relacionador público
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="emprendedor13">
+                <label class="form-check-label" for="emprendedor13">
+                  Productor de televisión
+                </label>
+              </div>
+
+            </div>
+            <!-- ARTÍSTICAS -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Artísticas</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista1">
+                <label class="form-check-label" for="artista1">
+                  Poeta
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista2">
+                <label class="form-check-label" for="artista2">
+                  DIrector de un conjunto u orquesta
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista3">
+                <label class="form-check-label" for="artista3">
+                  Músico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista4">
+                <label class="form-check-label" for="artista4">
+                  Escritor
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista5">
+                <label class="form-check-label" for="artista5">
+                  Actor
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista6">
+                <label class="form-check-label" for="artista6">
+                  Dibujante
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista7">
+                <label class="form-check-label" for="artista7">
+                  Encargado de sonido
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista8">
+                <label class="form-check-label" for="artista8">
+                  Cantante
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista9">
+                <label class="form-check-label" for="artista9">
+                  Dramaturgo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista10">
+                <label class="form-check-label" for="artista10">
+                  Director de cine o teatro
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista11">
+                <label class="form-check-label" for="artista11">
+                  Caricaturista
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista12">
+                <label class="form-check-label" for="artista12">
+                  Experto en obras de arte
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="artista13">
+                <label class="form-check-label" for="artista13">
+                  Compositor
+                </label>
+              </div>
+
+            </div>
+            <!-- CONVENCIONALES -->
+            <div class="col-12 col-lg-6 mt-3">
+              <div class="text-orange fw-bold mb-3">Convencionales</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional1">
+                <label class="form-check-label" for="convencional1">
+                  Contador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional2">
+                <label class="form-check-label" for="convencional2">
+                  Experto en control de calidad
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional3">
+                <label class="form-check-label" for="convencional3">
+                  Director de tráfico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional4">
+                <label class="form-check-label" for="convencional4">
+                  Estadístico
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional5">
+                <label class="form-check-label" for="convencional5">
+                  Secretario de un tribunal
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional6">
+                <label class="form-check-label" for="convencional6">
+                  Tramitador aduanero
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional7">
+                <label class="form-check-label" for="convencional7">
+                  Contralor de inventarios
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional8">
+                <label class="form-check-label" for="convencional8">
+                  Analista de finanzas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional9">
+                <label class="form-check-label" for="convencional9">
+                  Evaluador
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional10">
+                <label class="form-check-label" for="convencional10">
+                  Inspector de empresas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional11">
+                <label class="form-check-label" for="convencional11">
+                  Cajero
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional12">
+                <label class="form-check-label" for="convencional12">
+                  Cobrador de un banco
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" formControlName="convencional13">
+                <label class="form-check-label" for="convencional13">
+                  Especialista en impuestos
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form7.disabled">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 87.5%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">87.5%</div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 8 - AUTOEVALUACIÓN ======= -->
+<section class="contact section-bg" *ngIf="progress == 8">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Autoevaluación de habilidades</h2>
+      <p>Califíquese de 1 a 7 (siendo 7 la nota máxima) sus habildiade en comparación a las personas de su edad.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form8" (submit)="continuePart8()" class="php-email-form">
+
+          <div class="row">
+
+            <div class="col-6">
+              <div class="form-group select">
+                <label for="real1">Habilidad mecánica</label>
+                <select formControlName="real1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('real1').errors?.required && form8.get('real1').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="investigador1">Habilidad científica</label>
+                <select formControlName="investigador1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('investigador1').errors?.required && form8.get('investigador1').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="artista1">Habilidad artística</label>
+                <select formControlName="artista1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('artista1').errors?.required && form8.get('artista1').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="social1">Habilidad pedagógica</label>
+                <select formControlName="social1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('social1').errors?.required && form8.get('social1').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="emprendedor1">Habilidad para ventas</label>
+                <select formControlName="emprendedor1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('emprendedor1').errors?.required && form8.get('emprendedor1').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="convencional1">Habilidad de Oficina</label>
+                <select formControlName="convencional1" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('convencional1').errors?.required && form8.get('convencional1').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+
+            </div>
+            <div class="col-6">
+              <div class="form-group select">
+                <label for="real2">Destrezas manuales</label>
+                <select formControlName="real2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('real2').errors?.required && form8.get('real2').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="investigador2">Capacidad matemática</label>
+                <select formControlName="investigador2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('investigador2').errors?.required && form8.get('investigador2').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="artista2">Habilidad musical</label>
+                <select formControlName="artista2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('artista2').errors?.required && form8.get('artista2').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="social2">Sociabilidad</label>
+                <select formControlName="social2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('social2').errors?.required && form8.get('social2').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="emprendedor2">Capacidades gerenciales</label>
+                <select formControlName="emprendedor2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('emprendedor2').errors?.required && form8.get('emprendedor2').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+              <div class="form-group select">
+                <label for="convencional2">Capacidades administrativas y de oficina</label>
+                <select formControlName="convencional2" class="form-control">
+                  <option selected></option>
+                  <option [value]="1">1</option>
+                  <option [value]="2">2</option>
+                  <option [value]="3">3</option>
+                  <option [value]="4">4</option>
+                  <option [value]="5">5</option>
+                  <option [value]="6">6</option>
+                  <option [value]="7">7</option>
+                </select>
+                <div *ngIf="form8.get('convencional2').errors?.required && form8.get('convencional2').touched"
+                  class="alert alert-danger mb-0" role="alert">
+                  Seleccione una opción.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div class="text-center mt-3 me-3"><button type="submit" (click)="back()"
+                style="width:125px;">Atrás</button></div>
+            <div class="text-center mt-3"><button type="submit" [disabled]="form8.invalid">Continuar</button></div>
+          </div>
+          <div class="mt-3">
+            <p class="text-orange fw-bold">Progreso</p>
+            <div class="progress">
+              <div class="progress-bar bg-orange" role="progressbar" style="width: 100%; font-size: 15px;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= PART 9 - FINALIZAR TEST ======= -->
+<section id="contact" class="contact section-bg d-flex flex-column align-items-center"
+  style="padding-top: 120px; min-height: 500px;" *ngIf="progress == 9">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Fin del test</h2>
+      <p>Marque la casilla de todos los adjetivos que describan su personalidad. Señale tantos como desee. Trate de
+        definirse tal como es, no como le gustaría ser.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-4 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form9" (submit)="endTest()" class="php-email-form mt-0">
+          <div class="d-flex justify-content-center">
+
+            <div class="text-center me-3">
+              <button type="submit" (click)="back()" style="width:125px;">Atrás</button>
+            </div>
+            <div *ngIf="!this.isLoading" class="text-center">
+              <button type="submit">Finalizar test</button>
+            </div>
+            <div *ngIf="this.isLoading" class="text-center">
+              <button type="submit" [disabled]="this.isLoading" style="width: 166px;">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Cargando...
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-6 animation-idea">
+        <ng-lottie [options]="optionsIdea" containerClass="animation-idea"></ng-lottie>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+
+<app-footer></app-footer>

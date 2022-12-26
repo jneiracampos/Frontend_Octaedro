@@ -1,0 +1,188 @@
+<app-header></app-header>
+<!-- ======= PART ENCUESTA ======= -->
+<section id="contact" class="contact section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Encuesta Sociodemográfica</h2>
+        <p>A continuación, complete la siguiente encuesta para iniciar el test.</p>
+      </div>
+    </div>
+  
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8 align-items-stretch contact-form-wrap">
+          <form [formGroup]="form0" (submit)="continuePart0()" class="php-email-form">
+  
+            <div class="row">
+  
+              <div class="col-12">
+  
+                <!-- Nombre institución -->
+                <div class="form-group mb-3">
+                  <label for="name">Institución (colegio, universidad, instituto, etc)</label>
+                  <input type="text" formControlName="nombreInstitucion" class="form-control"
+                    placeholder="Nombre institución">
+                  <div *ngIf="form0.get('nombreInstitucion').errors?.required && form0.get('nombreInstitucion').touched"
+                    class="alert alert-danger" role="alert">
+                    Por favor digite el nombre de su institución. En caso de no tener, digite 'NA'.
+                  </div>
+                </div>
+  
+                <!-- Estrato -->
+                <div class="form-group mb-3">
+                  <label for="estratoSocioeconomico">Estrato</label>
+                  <select formControlName="estratoSocioeconomico" class="form-control">
+                    <option selected></option>
+                    <option [value]="1">1</option>
+                    <option [value]="2">2</option>
+                    <option [value]="3">3</option>
+                    <option [value]="4">4</option>
+                    <option [value]="5">5</option>
+                    <option [value]="6">6</option>
+                  </select>
+                  <div *ngIf="form0.get('estratoSocioeconomico').errors?.required && form0.get('estratoSocioeconomico').touched"
+                    class="alert alert-danger mb-0" role="alert">
+                    Seleccione un estrato.
+                  </div>
+                </div>
+  
+                <!-- Género -->
+                <div class="form-group mb-3">
+                  <label for="genero">Género</label>
+                  <select formControlName="genero" class="form-control">
+                    <option selected></option>
+                    <option [value]="1">Femenino</option>
+                    <option [value]="2">Masculino</option>
+                    <option [value]="3">Otro</option>
+                  </select>
+                  <div *ngIf="form0.get('genero').errors?.required && form0.get('genero').touched"
+                    class="alert alert-danger mb-0" role="alert">
+                    Seleccione una opción.
+                  </div>
+                </div>
+  
+                <!-- Rango Edad -->
+                <div class="form-group mb-3">
+                  <label for="rangoEdades">Rango Edad</label>
+                  <select formControlName="rangoEdades" class="form-control">
+                    <option selected></option>
+                    <option [value]="1">13-16</option>
+                    <option [value]="2">17-19</option>
+                    <option [value]="3">20-22</option>
+                    <option [value]="4">23-25</option>
+                    <option [value]="5">Más de 25</option>
+                  </select>
+                  <div *ngIf="form0.get('rangoEdades').errors?.required && form0.get('rangoEdades').touched"
+                    class="alert alert-danger mb-0" role="alert">
+                    Seleccione una opción.
+                  </div>
+                </div>
+  
+                <!-- Preferencia estudios superiores -->
+                <div class="form-group select">
+                  <label for="preferenciaEstudiosSuperiores">¿Cuál es tu preferencia de estudios superiores?</label>
+                  <select formControlName="preferenciaEstudiosSuperiores" class="form-control">
+                    <option selected></option>
+                    <option [value]="1">Tecnólogo</option>
+                    <option [value]="2">Técnico</option>
+                    <option [value]="3">Universitario</option>
+                    <option [value]="4">Posgrado</option>
+                  </select>
+                  <div *ngIf="form0.get('preferenciaEstudiosSuperiores').errors?.required && form0.get('preferenciaEstudiosSuperiores').touched"
+                    class="alert alert-danger mb-0" role="alert">
+                    Seleccione una opción.
+                  </div>
+                </div>
+  
+  
+  
+              </div>
+  
+            </div>
+  
+            <div class="row">
+              <div class="col-12">
+                <label class="my-3">De las siguientes asignaturas, señala cuáles son las de tu mayor preferencia:</label>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaFilosofiaYLiteratura" type="checkbox">
+                  <label class="form-check-label" for="asignaturaFilosofiaYLiteratura">
+                    Filosofía y Literatura
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaMatematicas" type="checkbox">
+                  <label class="form-check-label" for="asignaturaMatematicas">
+                    Matemáticas
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaSocialesYCiudadanas" type="checkbox">
+                  <label class="form-check-label" for="asignaturaSocialesYCiudadanas">
+                    Sociales y ciudadanas
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaCienciasNaturales" type="checkbox">
+                  <label class="form-check-label" for="asignaturaCienciasNaturales">
+                    Ciencias Naturales
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaIdiomas" type="checkbox">
+                  <label class="form-check-label" for="asignaturaIdiomas">
+                    Idiomas
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaDeportes" type="checkbox">
+                  <label class="form-check-label" for="asignaturaDeportes">
+                    Deportes
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="asignaturaArtesYDanza" type="checkbox">
+                  <label class="form-check-label" for="asignaturaArtesYDanza">
+                    Artes y Danza
+                  </label>
+                </div>
+  
+  
+              </div>
+  
+            </div>
+  
+            <div class="d-flex justify-content-center">
+
+              <div *ngIf = "!this.isLoading" class="text-center mt-3">
+                <button type="submit" [disabled]="form0.invalid">Enviar</button>
+              </div>
+  
+              <div *ngIf="this.isLoading" class="text-center mt-3">
+                <button type="submit" [disabled]="this.isLoading" style="width: 166px;">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Cargando...
+                </button>
+              </div>
+  
+            </div>
+          
+            <div class="alert alert-danger mt-3" role="alert" *ngIf = "surveyError == true">
+              Ha ocurrido un error al intentar enviar la información de la encuesta. Por favor intenta más tarde. Si el error persiste, comunícate con <strong>servicios@octaedro.com.co</strong>
+            </div>
+  
+          </form>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+<app-footer></app-footer>

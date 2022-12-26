@@ -1,0 +1,99 @@
+.animation-logo2{
+    max-width: 350px;
+    position: relative;
+    bottom: 40px;
+}
+
+.animation-aviones{
+    max-width: 1000px;
+}
+
+.video-fluid{
+    width: 100%;
+    height: 260px;
+}
+
+@media (min-width: 360px) { 
+    .animation-women{
+        max-width: 500px;
+        max-height: 400px;
+        position: relative; 
+        bottom: 50px;
+    }
+    .animation-dashboard{
+        max-width: 800px;
+        max-height: 700px;
+    }
+    .animation-check{
+        max-width: 200px;
+    }
+
+}
+
+@media (min-width:768px) { 
+    .services .icon-box:hover::before {
+        background:#d06a53;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    
+    .services .icon-box:hover .title a, .services .icon-box:hover .description {
+        color: #fff;
+    }
+    
+    .services .icon-box:hover .icon {
+        background: #fff;
+    }
+    
+    .services .icon-box:hover .icon i {
+        color: #d06a53;
+    }
+    
+    .animation-women{
+        max-width: 500px;
+        max-height: 400px;
+        position: relative; 
+        bottom: 80px;
+    }
+    .animation-dashboard{
+        max-width: 800px;
+        max-height: 700px;
+        position: relative;
+        right: 60px;
+    }
+    .animation-check{
+        width: 300px;
+        position: relative;
+        left: 30px;
+        top: 30px;
+    }
+}
+
+/* Cookie System */
+.cookie{
+    z-index: 2;
+}
+
+.cookie .bg-custom{
+    background-color:#433447;
+    z-index: 2;
+}
+.cookie .button-fixed{
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    border-radius: 4px;
+    z-index: 2;
+}
+.cookie .fas{
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;
+}
+.cookie p{
+    font-size: 14px;
+    z-index: 2;
+}

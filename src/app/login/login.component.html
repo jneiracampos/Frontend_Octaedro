@@ -1,0 +1,73 @@
+<app-header></app-header>
+<!-- Start Login Section -->
+<section id="contact" class="contact section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ingresa</h2>
+        <!--
+        <p>Si tienes comentarios, preguntas, o simplemente te gustaría contactarnos, siéntete libre de enviarnos un mensaje. Estamos aquí para guiarte en una de las decisiones más importantes de tu vida.</p>
+        -->
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 align-items-stretch contact-form-wrap">
+
+          <form [formGroup]="form" (submit)="onLogin()" class="php-email-form">
+            
+            <!-- Correo electrónico -->
+            <div class="form-group mt-3">
+              <label for="email">Correo electrónico</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="Correo electrónico">
+            </div>
+            <div *ngIf = "form.get('email').errors?.required && form.get('email').touched" class="alert alert-danger" role="alert">
+              Por favor ingrese su correo electrónico.
+            </div>
+            <div *ngIf="form.get('email').errors?.email && form.get('email').touched"
+              class="alert alert-danger" role="alert">
+              Correo electrónico inválido.
+            </div>
+
+            <!-- Contraseña -->
+            <div class="form-group mt-3">
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control" formControlName="password"placeholder="Contraseña">
+            </div>
+            <div *ngIf = "form.get('password').errors?.required && form.get('password').touched" class="alert alert-danger" role="alert">
+              Por favor ingrese su contraseña.
+            </div>
+            <div class="recaptcha mt-4">
+              <re-captcha #captchaElem (resolved) = "resolved($event)" siteKey = "{{recaptchaCode}}"></re-captcha>
+            </div>
+ 
+            
+            <!-- Submit buttons -->
+            <div *ngIf = "!this.isLoading" class="text-center">
+              <div class="text-center mt-4"><button type="submit" [disabled] = "form.invalid">Ingresar</button></div>
+            </div>
+            <div *ngIf = "this.isLoading" class="text-center mt-4">
+              <button type="submit" [disabled] = "form.invalid" style = "width: 166px;">
+                <span class="spinner-border spinner-border-sm" role="status"
+                      aria-hidden="true"></span>
+                  Cargando...
+              </button>
+            </div>
+            
+          </form>
+          <div *ngIf = "errorMessage != ''" class="alert alert-warning mt-3" role="alert">
+            {{ errorMessage }}
+          </div>
+          <div class = "text-end mt-4">
+            <p class = "mb-2">¿Aún no tienes cuenta? <a href = "/register">Regístrate</a></p>
+            <p> <a href = "/recover">¿Olvidaste tu contraseña?</a></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- End Login Section -->
+  <app-footer></app-footer>

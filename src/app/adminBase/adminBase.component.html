@@ -1,0 +1,130 @@
+<app-headerAdmin></app-headerAdmin>
+
+<!-- //form salarios -->
+<div class="card shadow">
+<form [formGroup]="myForm" (ngSubmit)="submit()">  
+    <div class="form-group">
+        <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+            Actualizar base de datos salarios
+          </h4>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors?.required">File is required.</div>
+        </div>
+    </div>  
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+</form>
+</div>
+<!-- //form Graduados -->
+<div class="card shadow">
+    <form [formGroup]="myForm" (ngSubmit)="submit()">  
+        <div class="form-group">
+            <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+                Actualizar base de datos Graduados
+              </h4>
+            <input 
+                formControlName="file"
+                id="file" 
+                type="file" 
+                class="form-control"
+                (change)="onFileChange($event)">
+            <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+                <div *ngIf="f.file.errors?.required">File is required.</div>
+            </div>
+        </div>  
+        <button class="btn btn-primary" type="submit">Actualizar</button>
+    </form>
+    
+</div>
+
+<div class="card shadow">
+
+<!-- //form Ocuapcion -->
+
+<form [formGroup]="myForm" (ngSubmit)="submit()">  
+    <div class="form-group">
+        <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+            Actualizar base de datos Ocuapciones
+          </h4>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors?.required">File is required.</div>
+        </div>
+    </div>  
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+</form>
+</div>
+<div class="card shadow">
+
+
+<!-- //form Ocuapcion -->
+
+<form [formGroup]="myForm" (ngSubmit)="submit()">  
+    <div class="form-group">
+        <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+            Actualizar base de datos Objetivos de desarrollo
+          </h4>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors?.required">File is required.</div>
+        </div>
+    </div>  
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+</form>
+</div>
+<div class="card shadow">
+<!-- //form grupos de imvetigacion-->
+<form [formGroup]="myForm" (ngSubmit)="submit()">  
+    <div class="form-group">
+        <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+            Actualizar base de datos de grupos de investigacion
+          </h4>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors?.required">File is required.</div>
+        </div>
+    </div>  
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+</form>
+</div>
+<div class="card shadow">
+<!-- //form programas -->
+
+<form [formGroup]="myForm" (ngSubmit)="submit()">  
+    <div class="form-group">
+        <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+            Actualizar base de datos Objetivos de Programas
+          </h4>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors?.required">File is required.</div>
+        </div>
+    </div>  
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+</form>
+</div>

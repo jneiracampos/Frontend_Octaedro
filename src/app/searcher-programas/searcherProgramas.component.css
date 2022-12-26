@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    --bs-table-striped-bg: rgba(208, 106, 83, 0.1);
+    /*width: 100%;
+    border: 1px solid #ddd;*/
+  }
+
+.text-right{
+  text-align: right !important;
+}
+
+.field p{
+  border-bottom: 1px solid #fd7e14 !important;
+}
+
+
+.start, .field ul{
+  border-left: 6px solid #fd7e14 !important;
+}
+.description{
+  border-radius: 10px;
+ }

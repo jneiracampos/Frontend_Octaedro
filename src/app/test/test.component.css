@@ -1,0 +1,103 @@
+.bg-orange{
+    background-color: #d06a53 !important;
+}
+
+.cta-btn{
+    color: #fff;
+}
+
+.cta-btn:hover{
+    color: #d06a53;
+}
+
+#comenzar{
+    background: url("../../assets/img/octaedro/explora.jpg");
+}
+
+.form-check{
+    margin-bottom: 10px;
+}
+
+.form-check input{
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.form-check label{
+    font-size: 16px;
+    margin-bottom: 0px;
+    padding: 3px 0px;
+}
+
+.select{
+    margin-bottom: 20px;
+}
+
+.end-test{
+    color: #d06a53;
+}
+
+.end-test:hover{
+    color: #fff;
+}
+
+h4, h3{
+    color: #d06a53;
+}
+
+.number{
+    color: white; 
+    font-size: 40px; 
+    font-weight: bold; 
+    position: relative; 
+    bottom: 10px
+}
+
+
+.section-gradient2{
+    background: linear-gradient(rgba(208, 106, 83, 0.8), rgba(187, 75, 50, 0.9));
+    /*background: linear-gradient(rgba(232, 201, 92, 0.6), rgba(208, 106, 83, 0.6));*/
+}
+
+
+@media (min-width: 360px) { 
+    .animation-geometria{
+        max-width: 350px;
+        position: relative;
+        bottom: 30px;
+    }
+    .animation-idea2{
+        max-width: 280px;
+        position: relative;
+        bottom: 30px;
+        left: 150px;
+    }
+    .animation-conversacion{
+        max-width: 280px;
+        position: relative;
+        left: 130px;
+        top: 10px;
+    }
+    .animation-women{
+        max-width: 280px;
+        position: relative;
+        left: 150px;
+    }
+
+    .animation-justice{
+        max-width: 300px;
+    }
+
+}
+
+@media (min-width:768px) { 
+    .animation-geometria{
+        max-width: 350px;
+        position: relative;
+        bottom: 30px;
+    }
+    .animation-idea{
+        max-width: 400px;
+    }
+}

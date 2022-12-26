@@ -1,0 +1,465 @@
+<app-header></app-header>
+<div class="container">
+  <div class="page-content page-container" id="page-content">
+    <div class="padding">
+      <div class="row container d-flex justify-content-center">
+        <div class="col-12">
+          <div class="card user-card-full">
+            <div class="row m-l-0 m-r-0">
+              <div class="col-sm-5 bg-c-lite-green user-profile">
+                <div class="card-block text-center text-white">
+                  <div class="m-b-25">
+                    <img
+                      src="https://img.icons8.com/bubbles/100/000000/user.png"
+                      class="img-radius img-fluid"
+                      alt="User-Profile-Image"
+                      (click)="photoInput.click()"
+                      [src]="
+                        imageUrl ||
+                        'https://img.icons8.com/bubbles/100/000000/user.png'
+                      "
+                    />
+                  </div>
+                  <div class="m-b-25">
+                    <input
+                      type="file"
+                      name="image-upload"
+                      #photoInput
+                      class="d-none"
+                      (change)="savePhotos($event)"
+                      accept=".jpg, .jpeg, .png"
+                    />
+                  </div>
+                  <p class="f-w-600">Nombre de usuario</p>
+                  <h6 class="f-w-600">{{ userName }}</h6>
+                  <p class="f-w-600">Profesión</p>
+                  <h6 class="f-w-600">{{ profesionUser }}</h6>
+                  <form
+                    [formGroup]="form2"
+                    (submit)="saveProfesion()"
+                    class="php-email-form"
+                  >
+                    <!-- profesion-->
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        formControlName="profesion"
+                        class="form-control"
+                        placeholder="Ingresa tu profesion"
+                      />
+                      <div class="mt-4">
+                        <button
+                          style="width: 166px"
+                          class="btn-primary description"
+                        >
+                          Agregar
+                        </button>
+                      </div>
+                    </div>
+                    <!-- profesionRecomend -->
+                  </form>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p class="m-b-10 f-w-600">Programas de interés</p>
+                    </div>
+                    <div class="col-sm-6">
+                      <table class="table table-striped table-personalized">
+                        <thead
+                          *ngFor="let g of profesionRecomend; let i = index"
+                        >
+                          <tr>
+                            {{
+                              g
+                            }}
+                          </tr>
+                          <!-- <tr>
+                            {{this.userInfo.programa_academico}}
+                          </tr>
+                          <tr>
+                            {{this.userInfo.programa_academico}}
+                          </tr> -->
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p class="m-b-10 f-w-600"> &Aacute;reas  de conocimiento</p>
+                    </div>
+                    <div class="col-sm-6">
+                      <table class="table table-striped table-personalized">
+                        <thead>
+                          <tr>
+                            {{
+                              this.userInfo.enfoque1
+                            }}
+                          </tr>
+                          <tr>
+                            {{
+                              this.userInfo.enfoque2
+                            }}
+                          </tr>
+                          <tr>
+                            {{
+                              this.userInfo.enfoque3
+                            }}
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row percent">
+                    <div
+                      class="
+                        d-flex
+                        align-items-center
+                        justify-content-center
+                        text-center
+                        mt-2
+                        ms-2
+                        square-size
+                      "
+                      style="
+                        border: 5px solid rgb(220, 53, 69);
+                        background: rgb(220, 53, 69);
+                      "
+                    >
+                      <!---->
+                      <p class="mb-0">{{ this.finalResults[0] }}%</p>
+                    </div>
+                    <div
+                      class="
+                        d-flex
+                        align-items-center
+                        justify-content-center
+                        text-center
+                        mt-2
+                        ms-2
+                        square-size
+                      "
+                      style="
+                        border: 5px solid rgb(32, 201, 151);
+                        background: rgb(32, 201, 151);
+                      "
+                    >
+                      <!---->
+                      <p class="mb-0">{{ this.finalResults[1] }}%</p>
+                    </div>
+                    <div
+                      class="
+                        d-flex
+                        align-items-center
+                        justify-content-center
+                        text-center
+                        mt-2
+                        ms-2
+                        square-size
+                      "
+                      style="
+  
+                        border: 5px solid rgb(201, 151, 198);
+                        background: rgb(201, 151, 198);
+                      "
+                    >
+                      <!---->
+                      <p class="mb-0">{{ this.finalResults[2] }}%</p>
+                    </div>
+                    <div
+                      class="
+                        d-flex
+                        align-items-center
+                        justify-content-center
+                        text-center
+                        mt-2
+                        ms-2
+                        square-size
+                      "
+                      style="
+                        border: 5px solid rgb(255, 193, 7);
+                        background: rgb(255, 193, 7);
+                      "
+                    >
+                      <!---->
+                      <p class="mb-0">{{ this.finalResults[3] }}%</p>
+                    </div>
+                    <div
+                      class="
+                        d-flex
+                        align-items-center
+                        justify-content-center
+                        text-center
+                        mt-2
+                        ms-2
+                        square-size
+                      "
+                      style="
+                        border: 5px solid rgb(247, 150, 70);
+                        background: rgba(247, 150, 70);
+                      "
+                    >
+                      <!---->
+                      <p class="mb-0">{{ this.finalResults[4] }}%</p>
+                    </div>
+                    <div
+                      class="
+                        d-flex
+                        align-items-center
+                        justify-content-center
+                        text-center
+                        mt-2
+                        ms-2
+                        square-size
+                      "
+                      style="
+                        border: 5px solid rgb(13, 202, 240);
+                        background: rgb(13, 202, 240);
+                      "
+                    >
+                      <!---->
+                      <p class="mb-0">{{ this.finalResults[5] }}%</p>
+                    </div>
+                  </div>
+                  <canvas id="myChart"></canvas>
+
+                  <i
+                    class="
+                      mdi mdi-square-edit-outline
+                      feather
+                      icon-edit
+                      m-t-10
+                      f-16
+                    "
+                  ></i>
+                </div>
+              </div>
+              <div class="col-sm-7">
+                <div class="card-blocks">
+                  <!-- <h4 class="m-b-20 p-b-5 f-w-600">Perfil personal</h4> -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="m-b-10 f-w-600 text-align-center">
+                        {{ descriptionUser }}
+                      </p>
+                      <div
+                        class="col-lg-6 align-items-stretch contact-form-wrap"
+                      >
+                        <form
+                          [formGroup]="form"
+                          (submit)="saveInfo()"
+                          class="php-email-form"
+                        >
+                          <!-- descripcion personal-->
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              formControlName="description"
+                              class="form-control"
+                              placeholder="Ingresa tu descripcion"
+                            />
+                            <div class="mt-4">
+                              <button
+                                style="width: 166px"
+                                class="btn-primary description"
+                              >
+                                Agregar
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <h4 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
+                      Nombre de programa 
+                      académico
+                    </h4>
+                    <div class="row">
+                      <!-- <h6 class="m-b-20 p-b-5 f-w-600">Lo lamentamos algo ocurrio con la información!!</h6> -->
+
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Universidad:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          {{ this.userInfo.universidad }}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Departamento:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          {{this.userInfo.departamento}}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Ciudad:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          {{this.userInfo.ciudad}}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Tipo de programa:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          {{this.userInfo.tipo_programa}}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Cantidad de creditos:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          {{this.userInfo.cantidad_creditos}}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Valor semestre:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          ${{this.userInfo.valor_semestre}}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Modalidad:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          {{this.userInfo.modalidad}}
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Facultad:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tu Facultad">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Grupo de investigación:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tu grupo de investigacion">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Nivel de ocupación:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tu nivel de ocupacion">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Posibles cargos:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tus posibles cargos">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Habilidades necesarias:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresar habilidades necesarias">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Conocimiento especificos:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tu conocimientos especificos">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Salario anual:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tu salario anual">
+                        </p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="m-b-10 f-w-600">Sector económico:</p>
+                      </div>
+                      <div class="col-sm-8">
+                        <p class="text-muted f-w-400">
+                          <input type="text" formControlName="profesion" class="form-control none-border-input" placeholder="Ingresa tu sector econimico">
+                        </p>
+                      </div>
+                    </div>
+                    <ul class="social-link list-unstyled m-t-40 m-b-10">
+                      <li>
+                        <a
+                          href="#!"
+                          data-toggle="tooltip"
+                          data-placement="bottom"
+                          title=""
+                          data-original-title="facebook"
+                          data-abc="true"
+                          ><i
+                            class="
+                              mdi mdi-facebook
+                              feather
+                              icon-facebook
+                              facebook
+                            "
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="#!"
+                          data-toggle="tooltip"
+                          data-placement="bottom"
+                          title=""
+                          data-original-title="twitter"
+                          data-abc="true"
+                          ><i
+                            class="mdi mdi-twitter feather icon-twitter twitter"
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="#!"
+                          data-toggle="tooltip"
+                          data-placement="bottom"
+                          title=""
+                          data-original-title="instagram"
+                          data-abc="true"
+                          ><i
+                            class="
+                              mdi mdi-instagram
+                              feather
+                              icon-instagram
+                              instagram
+                            "
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

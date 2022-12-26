@@ -1,0 +1,104 @@
+<app-header></app-header>
+<section id="contact" class="contact section-bg">
+
+    <div class="container">
+        <div class="section-title">
+            <h2>AÑADIR USUARIO</h2>
+            <!--
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, perferendis hic obcaecati quam unde
+                corrupti minima rerum iusto eos similique nihil vel itaque, cumque culpa quis? Ullam itaque consequatur
+                aliquam?</p>
+            -->
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 align-items-stretch contact-form-wrap">
+                <form [formGroup]="form" (submit)="onAddUser()" class="php-email-form">
+
+                    <div class="row">
+
+                        <div class="mt-3 form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nombre" required>
+                            <div *ngIf = "form?.get('name')?.touched && form?.get('name')?.invalid" class="alert alert-danger" role="alert">
+                              Digite su nombre
+                            </div>
+                          </div>
+
+
+                        <!-- Correo electrónico -->
+                        <div class="form-group mt-3">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" formControlName="email"
+                                placeholder="Correo electrónico">
+                            <div *ngIf="form.get('email').errors?.required && form.get('email').touched"
+                                class="alert alert-danger" role="alert">
+                                Por favor ingrese su correo electrónico.
+                            </div>
+                            <div *ngIf="form.get('email').errors?.email && form.get('email').touched"
+                                class="alert alert-danger" role="alert">
+                                Correo electrónico inválido.
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mt-3">
+                            <label for="selectProgram">Tipo de programa</label>
+                            <div class="form-group mt-3">
+                              <select class="form-select" formControlName="programa" aria-label="Default select example">
+                                  <option [value] = "0" selected></option>
+                                  <option *ngFor = "let programa of programa; let i = index" [value] = "i+1" selected >{{ programa }}</option>
+                              </select>
+                          </div>
+                          </div>
+
+                          <div class="form-group mt-3">
+                            <label for="selectPago">Registrar sin pagar</label>
+                            <div class="form-group mt-3">
+                              <select class="form-select" formControlName="pago" aria-label="Default select example">
+                                  <option [value] = "0" selected></option>
+                                  <option *ngFor = "let pago of pagos; let i = index" [value] = "i+1" selected >{{ pago }}</option>
+                              </select>
+                          </div>
+                          </div>
+
+                        <div class="form-check mt-3 ms-2">
+                            <input class="form-check-input" formControlName="admin" type="checkbox">
+                            <label class="form-check-label" for="admin">
+                                Administrador
+                            </label>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Submit buttons -->
+                    <div *ngIf="!this.isLoading" class="text-center">
+                        <div class="text-center mt-4"><button type="submit" [disabled]="form.invalid">Añadir</button>
+                        </div>
+                    </div>
+                    <div *ngIf="this.isLoading" class="text-center mt-4">
+                        <button type="submit" [disabled]="form.invalid" style="width: 166px;">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Cargando...
+                        </button>
+                    </div>
+
+                    <div *ngIf = "success" class="alert alert-success mt-3" role="alert">
+                        El usuario ha sido registrado.
+                    </div>
+                    <div *ngIf = "error" class="alert alert-danger mt-3" role="alert">
+                        Error. Intente más tarde.
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Contact Us Section -->
+<app-footer></app-footer>

@@ -1,0 +1,16 @@
+
+.form-check{
+    margin-bottom: 10px;
+}
+
+.form-check input{
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.form-check label{
+    font-size: 16px;
+    margin-bottom: 0px;
+    padding: 3px 0px;
+}

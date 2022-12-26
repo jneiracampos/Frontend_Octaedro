@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  --bs-table-striped-bg: rgba(208, 106, 83, 0.1);
+  /*width: 100%;
+  border: 1px solid #ddd;*/
+}
+
+.lista li{
+text-decoration: none;
+list-style: none;
+}
+
+.lista{
+margin: 0px;
+padding: 0px;
+}
+
+.btn-outline-orange{
+color: #d06a53;
+border-color: #d06a53;
+}
+
+.btn-outline-orange:hover{
+color: #fff;
+background-color: #d06a53;
+}

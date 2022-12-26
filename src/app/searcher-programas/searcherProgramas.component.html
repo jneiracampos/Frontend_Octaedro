@@ -1,0 +1,515 @@
+<!--
+<div class="container" *ngIf = "buscadorNum == 2">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="md-form">
+                <input type="text" [(ngModel)]="searchText" class="form-control" id="search" mdbInput />
+            </div>
+        </div>
+    </div>
+    <table mdbTable class="z-depth-1">
+        <thead>
+            <tr>
+                <th scope="col">Programa académico</th>
+                <th scope="col">Universidad</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Tipo de programa</th>
+                <th scope="col">Cantidad de créditos</th>
+                <th scope="col">Valor del semestre</th>
+                <th scope="col">Modalidad</th>
+                <th scope="col">Enfoque 1</th>
+                <th scope="col">Enfoque 2</th>
+                <th scope="col">Enfoque 3</th>
+                <th scope="col">Enfoque 4</th>
+                <th scope="col">Enfoque 5</th>
+                <th scope="col">Enfoque 6</th>
+                <th scope="col">Enfoque 7</th>
+                <th scope="col">Enfoque 8</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let g of elements">
+                <td scope="row">{{ g.programa_academico }}</td>
+                <td>{{ g.universidad }}</td>
+                <td>{{ g.departamento }}</td>
+                <td>{{ g.ciudad }}</td>
+                <td>{{ g.tipo_progama }}</td>
+                <td>{{ g.cantidad_creditos }}</td>
+                <td>{{ g.valor_semestre }}</td>
+                <td>{{ g.modalidad }}</td>
+                <td>{{ g.enfoque1 }}</td>
+                <td>{{ g.enfoque2 }}</td>
+                <td>{{ g.enfoque3 }}</td>
+                <td>{{ g.enfoque4 }}</td>
+                <td>{{ g.enfoque5 }}</td>
+                <td>{{ g.enfoque6 }}</td>
+                <td>{{ g.enfoque7 }}</td>
+                <td>{{ g.enfoque8 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+-->
+
+<!-- Page Heading -->
+
+<div class="d-sm-flex align-items-center justify-content-between mt-5">
+  <h1 class="h3 mb-0 text-gray-800" style="color: #d06a53">Buscador</h1>
+</div>
+<p class="my-2">
+  ¡Utiliza este buscador para comparar programas académicos y encontrar las
+  ofertas educativas más adecuadas para ti!
+</p>
+
+<div class="px-4 pt-2 pb-4 mt-4 bg-white border rounded shadow">
+  <!-- Formularios -->
+  <section style="padding: 0px" class="mt-3">
+    <div class="row">
+      <p class="alert alert-danger mb-4" *ngIf="error">
+        Ha ocurrido un error. Intente más tarde.
+      </p>
+      <form class="form col-6" [formGroup]="form1">
+        <!-- Dimensión -->
+        <div class="form-group">
+          <h5 class="text-orange">Dimensión</h5>
+          <select
+            class="form-select"
+            formControlName="dimension"
+            aria-label="Default select example"
+          >
+            <option [value]="0" selected>Todas las dimensiones</option>
+            <option [value]="1">Realista</option>
+            <option [value]="2">Investigador</option>
+            <option [value]="3">Artístico</option>
+            <option [value]="4">Social</option>
+            <option [value]="5">Emprendedor</option>
+            <option [value]="6">Convencional</option>
+          </select>
+        </div>
+
+        <!-- Departamento y ciudad -->
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Departamento y ciudad</h5>
+          <select
+            class="form-select"
+            formControlName="ciudad"
+            aria-label="Default select example"
+          >
+            <option [value]="0"></option>
+            <option
+              *ngFor="let ciudad of ciudades1; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ ciudad }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Universidad</h5>
+          <select
+            class="form-select"
+            formControlName="universidad"
+            aria-label="Default select example"
+          >
+            <option selected [value]="0"></option>
+            <option
+              *ngFor="let universidad of universidades1; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ universidad }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Tipo de programa</h5>
+          <select
+            class="form-select"
+            formControlName="tipo_programa"
+            aria-label="Default select example"
+          >
+            <option [value]="0" selected></option>
+            <option
+              *ngFor="let tipo_programa of tipo_programas1; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ tipo_programa }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Programa académico</h5>
+          <select
+            class="form-select"
+            formControlName="programa"
+            aria-label="Default select example"
+          >
+            <option [value]="0" selected></option>
+            <option
+              *ngFor="let programa of programas1; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ programa }}
+            </option>
+          </select>
+        </div>
+      </form>
+
+      <form class="form col-6" [formGroup]="form2">
+        <!-- Dimensión -->
+        <div class="form-group">
+          <h5 class="text-orange">Dimensión</h5>
+          <select
+            class="form-select"
+            formControlName="dimension"
+            aria-label="Default select example"
+          >
+            <option [value]="0" selected>Todas las dimensiones</option>
+            <option [value]="1">Realista</option>
+            <option [value]="2">Investigador</option>
+            <option [value]="3">Artístico</option>
+            <option [value]="4">Social</option>
+            <option [value]="5">Emprendedor</option>
+            <option [value]="6">Convencional</option>
+          </select>
+        </div>
+
+        <!-- Departamento y ciudad -->
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Departamento y ciudad</h5>
+          <select
+            class="form-select"
+            formControlName="ciudad"
+            aria-label="Default select example"
+          >
+            <option [value]="0"></option>
+            <option
+              *ngFor="let ciudad of ciudades2; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ ciudad }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Universidad</h5>
+          <select
+            class="form-select"
+            formControlName="universidad"
+            aria-label="Default select example"
+          >
+            <option selected [value]="0"></option>
+            <option
+              *ngFor="let universidad of universidades2; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ universidad }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Tipo de programa</h5>
+          <select
+            class="form-select"
+            formControlName="tipo_programa"
+            aria-label="Default select example"
+          >
+            <option [value]="0" selected></option>
+            <option
+              *ngFor="let tipo_programa of tipo_programas2; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ tipo_programa }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <h5 class="text-orange">Programa académico</h5>
+          <select
+            class="form-select"
+            formControlName="programa"
+            aria-label="Default select example"
+          >
+            <option [value]="0" selected></option>
+            <option
+              *ngFor="let programa of programas2; let i = index"
+              [value]="i + 1"
+              selected
+            >
+              {{ programa }}
+            </option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<div class="px-4 py-4 mt-4 bg-white border rounded shadow">
+  <!-- Información de los programas -->
+  <section style="padding: 0px" class="field">
+    <div class="row d-flex justify-content-around">
+      <h5 class="col-12 text-center mb-4 mt-3 text-orange">Tipo de Programa</h5>
+      <p class="col-5 text-center py-3 start">
+        <span *ngIf="this.programa1">{{ this.programa1.tipo_programa }}</span>
+      </p>
+      <p class="col-5 text-center py-3">
+        <span *ngIf="this.programa2">{{ this.programa2.tipo_programa }}</span>
+      </p>
+    </div>
+    <div class="row mt-4 d-flex justify-content-around">
+      <h5 class="col-12 text-center mb-4 mt-3 text-orange">
+        Cantidad de Créditos
+      </h5>
+      <p class="col-5 text-center py-3 start">
+        <span *ngIf="this.programa1">{{
+          this.programa1.cantidad_creditos
+        }}</span>
+      </p>
+      <p class="col-5 text-center py-3">
+        <span *ngIf="this.programa2">{{
+          this.programa2.cantidad_creditos
+        }}</span>
+      </p>
+    </div>
+    <div class="row mt-4 d-flex justify-content-around">
+      <h5 class="col-12 text-center mb-4 mt-3 text-orange">
+        Cantidad de Semestres
+      </h5>
+      <p class="col-5 text-center py-3 start">
+        <span *ngIf="this.programa1">{{
+          this.programa1.cantidad_semestres
+        }}</span>
+      </p>
+      <p class="col-5 text-center py-3">
+        <span *ngIf="this.programa2">{{
+          this.programa2.cantidad_semestres
+        }}</span>
+      </p>
+    </div>
+    <div class="row mt-4 d-flex justify-content-around">
+      <h5 class="col-12 text-center mb-4 mt-3 text-orange">
+        Valor del Semestre
+      </h5>
+      <p class="col-5 text-center py-3 start">
+        <span *ngIf="this.programa1 && this.programa1.valor_semestre != null">{{
+          this.formatNumber(
+            this.parseInt(this.programa1.valor_semestre),
+            "en-US"
+          )
+        }}</span>
+      </p>
+      <p class="col-5 text-center py-3">
+        <span *ngIf="this.programa2 && this.programa2.valor_semestre != null">{{
+          this.formatNumber(
+            this.parseInt(this.programa2.valor_semestre),
+            "en-US"
+          )
+        }}</span>
+      </p>
+    </div>
+    <div class="row mt-4 d-flex justify-content-around">
+      <h5 class="col-12 text-center mb-4 mt-3 text-orange">Modalidad</h5>
+      <p class="col-5 text-center py-3 start">
+        <span *ngIf="this.programa1">{{ this.programa1.modalidad }}</span>
+      </p>
+      <p class="col-5 text-center py-3">
+        <span *ngIf="this.programa2">{{ this.programa2.modalidad }}</span>
+      </p>
+    </div>
+    <div class="row mt-4 d-flex justify-content-around">
+      <h5 class="col-12 text-center mb-4 mt-3 text-orange">Enfoques</h5>
+      <div class="col-5 text-center py-3">
+        <ul class="list-group" *ngIf="this.programa1">
+          <li class="list-group-item" *ngIf="this.programa1.enfoque1 != null">
+            {{ this.programa1.enfoque1 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque2 != null">
+            {{ this.programa1.enfoque2 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque3 != null">
+            {{ this.programa1.enfoque3 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque4 != null">
+            {{ this.programa1.enfoque4 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque5 != null">
+            {{ this.programa1.enfoque5 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque6 != null">
+            {{ this.programa1.enfoque6 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque7 != null">
+            {{ this.programa1.enfoque7 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa1.enfoque8 != null">
+            {{ this.programa1.enfoque8 }}
+          </li>
+        </ul>
+        <div class="mt-4" *ngIf="this.programa1">
+          <button
+            style="width: 166px"
+            class="btn-primary description"
+            (click)="onSave(this.programa1)"
+          >
+            Guardar
+          </button>
+        </div>
+      </div>
+      <div class="col-5 text-center py-3">
+        <ul class="list-group" *ngIf="this.programa2">
+          <li class="list-group-item" *ngIf="this.programa2.enfoque1 != null">
+            {{ this.programa2.enfoque1 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque2 != null">
+            {{ this.programa2.enfoque2 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque3 != null">
+            {{ this.programa2.enfoque3 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque4 != null">
+            {{ this.programa2.enfoque4 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque5 != null">
+            {{ this.programa2.enfoque5 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque6 != null">
+            {{ this.programa2.enfoque6 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque7 != null">
+            {{ this.programa2.enfoque7 }}
+          </li>
+          <li class="list-group-item" *ngIf="this.programa2.enfoque8 != null">
+            {{ this.programa2.enfoque8 }}
+          </li>
+        </ul>
+        <div class="mt-4" *ngIf="this.programa2">
+          <button
+            style="width: 166px"
+            class="btn-primary description"
+            (click)="onSave(this.programa1)"
+          >
+            Guardar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--
+<section>
+    <form class="form" [formGroup]="form" (submit)="onRequest()">
+        <div class="row">
+            <div class="col-4">
+                <h4>Dimensión</h4>
+                <div class="form-group">
+                    <select class="form-select" formControlName="dimension" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="0">Realista</option>
+                        <option value="1">Investigador</option>
+                        <option value="2">Social</option>
+                        <option value="3">Emprendedor</option>
+                        <option value="4">Artístico</option>
+                        <option value="5">Convencional</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div class = "d-flex" *ngFor = "let idx of dimension_arr">
+                        <p>{{ dimensiones[idx] }}</p>
+                        <button class = "btn btn-danger">x</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h4>Universidad</h4>
+                <div class="form-group">
+                    <select class="form-select" formControlName="universidad" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <h4>Ciudad</h4>
+                <div class="form-group">
+                    <select class="form-select" formControlName="ciudad" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class = "d-flex">
+            <button class = "btn btn-primary">Limpiar filtros</button>
+            <button type="submit" class = "btn btn-primary">Filtrar</button>
+        </div>
+        
+    </form>
+</section>
+
+
+
+<div style="overflow-x:auto; overflow-y: auto; max-height: 700px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Programa académico</th>
+                <th scope="col">Universidad</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Tipo de programa</th>
+                <th scope="col">Cantidad de créditos</th>
+                <th scope="col">Valor del semestre</th>
+                <th scope="col">Modalidad</th>
+                <th scope="col">Enfoque 1</th>
+                <th scope="col">Enfoque 2</th>
+                <th scope="col">Enfoque 3</th>
+                <th scope="col">Enfoque 4</th>
+                <th scope="col">Enfoque 5</th>
+                <th scope="col">Enfoque 6</th>
+                <th scope="col">Enfoque 7</th>
+                <th scope="col">Enfoque 8</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let g of elements">
+                <td scope="row">{{ g.programa_academico }}</td>
+                <td>{{ g.universidad }}</td>
+                <td>{{ g.departamento }}</td>
+                <td>{{ g.ciudad }}</td>
+                <td>{{ g.tipo_progama }}</td>
+                <td>{{ g.cantidad_creditos }}</td>
+                <td>{{ g.valor_semestre }}</td>
+                <td>{{ g.modalidad }}</td>
+                <td>{{ g.enfoque1 }}</td>
+                <td>{{ g.enfoque2 }}</td>
+                <td>{{ g.enfoque3 }}</td>
+                <td>{{ g.enfoque4 }}</td>
+                <td>{{ g.enfoque5 }}</td>
+                <td>{{ g.enfoque6 }}</td>
+                <td>{{ g.enfoque7 }}</td>
+                <td>{{ g.enfoque8 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+-->

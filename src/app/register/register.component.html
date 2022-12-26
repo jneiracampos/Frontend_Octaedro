@@ -1,0 +1,156 @@
+<app-header></app-header>
+<section id="contact" class="contact section-bg">
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Regístrate</h2>
+      <!--
+      <p>Si tienes comentarios, preguntas, o simplemente te gustaría contactarnos, siéntete libre de enviarnos un
+        mensaje. Estamos aquí para guiarte en una de las decisiones más importantes de tu vida.</p>
+        -->
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row d-flex justify-content-center">
+
+
+      <div class="col-lg-6 align-items-stretch contact-form-wrap">
+        <form [formGroup]="form" (submit)="onRegister()" class="php-email-form">
+
+          <!-- Nombre -->
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" formControlName="name" class="form-control" placeholder="Nombre">
+            <div *ngIf="form.get('name').errors?.required && form.get('name').touched" class="alert alert-danger"
+              role="alert">
+              Por favor ingrese su nombre.
+            </div>
+            <div *ngIf="form.get('name').errors?.minlength && form.get('name').touched" class="alert alert-danger"
+              role="alert">
+              El nombre debe contener al menos {{ form.get('name').errors?.minlength.requiredLength }} caracteres.
+            </div>
+          </div>
+
+          <!-- Correo electrónico -->
+          <div class="form-group mt-3">
+            <label for="emailInput">Correo electrónico</label>
+            <input type="email" class="form-control" formControlName="emailInput" placeholder="Correo electrónico">
+            <div *ngIf="form.get('emailInput').errors?.required && form.get('emailInput').touched"
+              class="alert alert-danger" role="alert">
+              Por favor ingrese su correo electrónico.
+            </div>
+            <div *ngIf="form.get('emailInput').errors?.email && form.get('emailInput').touched"
+              class="alert alert-danger" role="alert">
+              Correo electrónico inválido.
+            </div>
+          </div>
+
+
+          <!-- Contraseña -->
+          <div class="form-group mt-3">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Contraseña">
+          </div>
+          <div *ngIf="form.get('password').errors?.required && form.get('password').touched" class="alert alert-danger"
+            role="alert">
+            Por favor ingrese una contraseña.
+          </div>
+          <div *ngIf="form.get('password').errors?.minlength && form.get('password').touched" class="alert alert-danger"
+            role="alert">
+            La contraseña debe contener al menos {{ form.get('password').errors?.minlength.requiredLength }} caracteres.
+          </div>
+
+          <!-- Confirmar contraseña -->
+          <div class="form-group mt-3">
+            <label for="confirmPassword">Confirmar contraseña</label>
+            <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Contraseña"
+              compare="password">
+            <div *ngIf="form.get('confirmPassword').errors?.required && form.get('confirmPassword').touched"
+              class="alert alert-danger mb-0" role="alert">
+              Por favor ingrese nuevamente su contraseña.
+            </div>
+            <div *ngIf="form.errors?.notSame && form.get('confirmPassword').touched"
+              class="alert alert-danger" role="alert">
+              Las contraseñas no coinciden.
+            </div>
+          </div>
+
+
+          <div class="form-group mt-3">
+            <label for="selectProgram">Tipo de programa</label>
+            <div class="form-group mt-3">
+              <select class="form-select" formControlName="programa" aria-label="Default select example">
+                  <option [value] = "0" selected></option>
+                  <option *ngFor = "let programa of programa; let i = index" [value] = "i+1" selected >{{ programa }}</option>
+              </select>
+          </div>
+          </div>
+
+        
+
+          <!-- Aceptar términos y condiciones -->
+          <div class="form-group mt-4">
+            <div class="form-check">
+              <input class="form-check-input border" type="checkbox" formControlName="acceptConditions">
+              <label class="form-check-label ms-2" for="investigador12">
+                Aceptar <a href = "/terminos-y-condiciones" target = "_blank">política de datos, términos y condiciones</a>
+              </label>
+            </div>
+            <div *ngIf="form.get('acceptConditions').errors?.required && form.get('acceptConditions').touched"
+              class="alert alert-danger mb-0" role="alert">
+              Acepta la política de datos, términos y condiciones del servicio para registrarte.
+            </div>
+          </div>
+
+          <!-- Llave de Activación -->
+          <!--
+          <div class="form-group mt-3">
+            <label for="license">Llave de Activación</label>
+            <input type="text" class="form-control" formControlName="license" placeholder="Llave de Activación">
+            <div *ngIf="form.get('license').errors?.required && form.get('license').touched" class="alert alert-danger"
+              role="alert">
+              Por favor ingrese su licencia.
+            </div>
+            <div *ngIf="form.get('license').errors?.minlength && form.get('license').touched" class="alert alert-danger"
+              role="alert">
+              La licencia de activación debe tener {{ form.get('password').errors?.minlength.requiredLength }}
+              caracteres.
+            </div>
+          </div>
+          -->
+
+          <div class="recaptcha mt-4">
+            <re-captcha #captchaElem (resolved) = "resolved($event)" siteKey = "{{recaptchaCode}}"></re-captcha>
+          </div>
+ 
+
+          <!-- Submit buttons -->
+          <div *ngIf = "!this.isLoading" class="text-center">
+            <div class="text-center mt-4">
+              <button type="submit" [disabled]="form.invalid">Registrarme</button>
+            </div>
+          </div>
+          <div *ngIf = "this.isLoading" class="text-center mt-4">
+            <button type="submit" [disabled] = "form.invalid" style = "width: 166px;">
+              <span class="spinner-border spinner-border-sm" role="status"
+                    aria-hidden="true"></span>
+                Cargando...
+            </button>
+          </div>
+          <div *ngIf = "this.errorMessage != ''" class="alert alert-warning mt-3" role="alert">
+            {{ this.errorMessage }}
+          </div>
+          <div class="text-end mt-4">
+            <p>¿Ya tienes cuenta? <a href="/login">Ingresa</a></p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+<app-footer></app-footer>

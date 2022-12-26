@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #433447;">
+  <div class="container">
+
+    <div class="logo d-flex pt-2 pb-1 align-items-center">
+        <img src="../assets/img/octaedro/Logo.png" alt="" class="img-fluid" width="60px;">
+        <h1 class="ms-2 pt-1">Octaedro</h1>
+    </div>
+
+
+    <div class="navbar-text d-none d-lg-block" *ngIf="!userIsAuthenticated">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right !important;">
+        <ul class="navbar-nav mr-auto">
+          <li><a class="nav-link scrollto active mt-3 mt-lg-0" href="#home">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#quienes-somos">Quienes somos</a></li>
+          <li><a class="nav-link scrollto" href="#test">Test Vocacional</a></li>
+          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+          <li><a class="nav-link scrollto" href="#equipo">Equipo</a></li>
+          <li><a class="nav-link scrollto" href="https://octaedroblog.blogspot.com" target="_blank">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+          <li><a class="nav-link scrollto mb-2 mb-lg-0" href="/login"><u>Ingresar</u></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navbar-text d-none d-lg-block" *ngIf="userIsAuthenticated">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right !important;">
+        <ul class="navbar-nav mr-auto">
+          <li><a class="nav-link scrollto" href="/dashboard">Panel</a></li>
+          <li><a class="nav-link scrollto" href="/test">Test</a></li>
+          <li><a class="nav-link scrollto" href="/profile">Perfil</a></li>
+          <li><a class="nav-link scrollto" (click)="onLogout()">Salir</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--
+    <ul>
+      <li><a class="nav-link scrollto" href="/dashboard">Panel de Control</a></li>
+      <li><a class="nav-link scrollto" href="/test">Test</a></li>
+      <li><a class="nav-link scrollto" (click)="onLogout()">Salir</a></li>
+    </ul>
+    -->
+    <div class="ms-3 mt-2 d-block d-lg-none">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="ms-4 navbar-text d-block d-lg-none" *ngIf="!userIsAuthenticated">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right !important;">
+      <ul class="navbar-nav mr-auto">
+        <li><a class="nav-link scrollto active mt-3 mt-lg-0" href="#home">Inicio</a></li>
+        <li><a class="nav-link scrollto" href="#test">Test Vocacional</a></li>
+        <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+        <li><a class="nav-link scrollto" href="#equipo">Equipo</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+        <li><a class="nav-link scrollto mb-2 mb-lg-0" href="/login"><u>Ingresar</u></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ms-4 navbar-text d-block d-lg-none" *ngIf="userIsAuthenticated">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right !important;">
+      <ul class="navbar-nav mr-auto">
+        <li><a class="nav-link scrollto" href="/dashboard">Panel</a></li>
+        <li><a class="nav-link scrollto" href="/test">Test</a></li>
+        <li><a class="nav-link scrollto" (click)="onLogout()">Salir</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+<!--
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <div class="logo d-flex pt-2">
+      <a href="index.html"><img src="../assets/img/octaedro/Logo.png" alt="" class="img-fluid"></a>
+      <h1 class="ms-2 p-0 pt-1"><a href="index.html"><span class="text-blue">Octaedro</span></a></h1>
+    </div>
+
+    <nav id="navbar" class="navbar" *ngIf="!userIsAuthenticated">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#home">Inicio</a></li>
+        <li><a class="nav-link scrollto" href="#test">Test Vocacional</a></li>
+        <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+        <li><a class="nav-link scrollto" href="#equipo">Equipo</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+        <li><a class="nav-link scrollto" href="/login"><u>Ingresar</u></a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+
+    <nav id="navbar" class="navbar" *ngIf="userIsAuthenticated">
+      <ul>
+        <li><a class="nav-link scrollto" href="/dashboard">Panel</a></li>
+        <li><a class="nav-link scrollto" href="/test">Test</a></li>
+        <li><a class="nav-link scrollto" (click)="onLogout()">Salir</a></li>
+
+ 
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle d-none" style="color: #e8c95c; font-size: 40px;"></i>
+    </nav>
+
+  </div>
+</header> End Header -->

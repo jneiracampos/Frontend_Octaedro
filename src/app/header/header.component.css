@@ -1,0 +1,28 @@
+.logo h1{
+  color: #a8d6c6 !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+li a{
+  color: #a8d6c6 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+li a:hover{
+  cursor: pointer;
+  color: #e8c95c !important;
+  font-family: "Poppins", sans-serif !important;
+
+}
+
+.active{
+  color: #e8c95c !important;
+}
+
+.navbar-toggler-icon{
+  color: #e8c95c !important;
+  border-color: 1px solid #e8c95c !important;
+  background-image: url("../../assets/img/octaedro/barra_menu.png") !important;
+}
