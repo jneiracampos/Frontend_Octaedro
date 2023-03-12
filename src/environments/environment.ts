@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-   production: true,
+   production: false,
    name: "DEV",
    //endpoint: "https://octaedro-backend.alephmind.co",
    endpoint: "https://octaedro-api.sergiomolina.me",
