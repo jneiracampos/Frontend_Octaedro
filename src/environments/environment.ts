@@ -3,11 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-   production: false, 
-   name: "DEV", 
+   production: true,
+   name: "DEV",
    //endpoint: "https://octaedro-backend.alephmind.co",
    endpoint: "https://octaedro-api.sergiomolina.me",
-   recaptchaCode: "6LcgSDUaAAAAACdHvw_Qsh2HUnk3ibEMYA-pUzc2", 
+   recaptchaCode: "6LcgSDUaAAAAACdHvw_Qsh2HUnk3ibEMYA-pUzc2",
    version: "0.0.5"
 };
 
